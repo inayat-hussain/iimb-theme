@@ -19,13 +19,14 @@
           </a>
           </li>
 	  <!-- Bharat MOOCs -->
+          <!--IITBombayX: Blog and News URL changed for IIMB-->
           <li class="nav-colophon-02">
-          <a id="news" href="http://news.iitbombayx.in" target="_blank">
+          <a id="news" href="http://www.iimb.ernet.in/node/7383" target="_blank">
               ${_("News")}
           </a>
           </li>
           <li class="nav-colophon-03">
-          <a id="blog" href="http://blogs.iitbombayx.in" target="_blank">
+          <a id="blog" href="https://iimbxonline.wordpress.com/" target="_blank">
               ${_("Blog")}
           </a>
           </li>
@@ -47,16 +48,17 @@
 
 <!-- IITBombayX - using custom variable name for theme name instead of hard coding -->
 <!-- 06th Jan 2016 -->
+        <!--IITBombayX: Eucalyptus change: Logo URL path changed for comprehensive theming-->
+        <img src=${static.url('../../../../../static/'+settings.THEME_NAME+'/images/footerlogo.png')} alt="${_('{platform_name} Logo').format(platform_name=settings.PLATFORM_NAME)}" width="92px" />
 
-        <img src=${static.url('../../../../static/'+settings.THEME_NAME+'/images/footerlogo.png')} alt="${_('{platform_name} Logo').format(platform_name=settings.PLATFORM_NAME)}" width="92px" />
-
-
-        <p class="platform_text">${_("{platform_name}").format(platform_name=settings.PLATFORM_NAME)} ${_("offers interactive online classes and MOOCs. Subjects from multiple disciplines are presently offered, as can be seen in the list of courses. This list will expand later. {platform_name} is a non-profit online platform created with funding from National Mission on Education through Information and Communication Technology (NME-ICT), Ministry of Human Resource Development (MHRD), Government of India (GoI).").format(platform_name=settings.PLATFORM_NAME)}</p> 
+	<!--IITBombayX: Footer text changed for IIMB-->
+        <p class="platform_text">${_("{platform_name}").format(platform_name=settings.PLATFORM_NAME)} offers interactive world-class Massive Open Online Courses (MOOCs) in management to learners across the globe and creates positive social impact using educational technology.</p>
       </div>
     </div>
 
     <div class="references">
-      <nav class="nav-social">
+    <!--IITBombayX: Social media URL commented for IIMB-->
+      <%doc><nav class="nav-social">
         <ul>
           <li class="nav-social-02">
             <a href=${_('{platform_name}').format(platform_name=settings.PLATFORM_FACEBOOK_ACCOUNT)} target="_blank" rel="external">
@@ -79,7 +81,7 @@
             </a>
           </li-->
         </ul>
-      </nav>
+      </nav></%doc>
 
       <!--p class="copyright" style="text-align:right; color:#050505; margin-bottom:11px;">${_("&copy; 2014 {platform_name}, except where noted, all rights reserved").format(platform_name=settings.PLATFORM_NAME)}</p-->
 

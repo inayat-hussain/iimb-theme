@@ -30,8 +30,9 @@
 								<ul class="sidemenu">
 								<li><a class="links" href="${marketing_link('ABOUT')}">ABOUT</a></li>
 								<li><a class="links" href="${marketing_link('RESEARCH')}">RESEARCH & PEDAGOGY</a></li>
-								<li><a class="links" href="http://blogs.iitbombayx.in" target="_blank">BLOG</a></li>
-								<li><a class="links" href="http://news.iitbombayx.in" target="_blank">NEWS</a></li>
+								  <!--IITBombayX: Blog and News URL changed for IIMB-->
+								<li><a class="links" href="https://iimbxonline.wordpress.com/" target="_blank">BLOG</a></li>
+								<li><a class="links" href="http://www.iimb.ernet.in/node/7383" target="_blank">NEWS</a></li>
 								<li><a class="links-active" href="${marketing_link('FAQ')}">LEARNERS FAQ</a></li>
 								<li><a class="links" href="${marketing_link('PLATFORM_FAQ')}">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} FAQ</a></li>
 								<li><a class="links" href="${marketing_link('CONTACT')}">CONTACT US</a></li>
@@ -82,7 +83,7 @@
 								<input id="ac-4" name="accordion-1" type="checkbox" />
 								<label for="ac-4">Are courses only offered in English?</label>
 								<article class="ac-small">
-                                                                <p><p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}courses are currently offered in Hindi and English both. Later we will be launching these courses in other regional Indian languages.</p>
+                                                                <p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}courses are currently offered in Hindi and English both. Later we will be launching these courses in other regional Indian languages.</p>
 								</article>
 								</div>
 								
@@ -102,7 +103,8 @@
 								</article>
 								</div>
 								
-								<div>
+							        <!--IITBombayX: Demo course reference removed temporarily-->
+								<%doc><div>
 								<input id="ac-7" name="accordion-1" type="checkbox" />
 								<label for="ac-7">Is there a walk-through of a sample course session?</label>
                                                                 <article class="ac-small">
@@ -117,7 +119,7 @@
 								<article class="ac-small">
 								<p>Yes! The Demo course was created to give you an overview of how ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses work. It is not mandatory to finish it.</p>
 								</article>
-								</div>
+								</div></%doc>
 								
                                                                 <div>
 								<input id="ac-9" name="accordion-1" type="checkbox" />

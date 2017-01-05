@@ -91,4 +91,13 @@
  .login-register .form-field .field-link{
   color: $button-color;
  }
+
+//IITBombayX: Eucalyptus change: CSS for Honor code URL added by Nitin Ayer
+ .login-register .form-field label a {
+  text-decoration: none;
+ }
+
+ .login-register .form-field label a:hover {
+   border-bottom: 1px dotted $link-color;
+ }
 }

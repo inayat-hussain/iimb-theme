@@ -24,15 +24,21 @@ $customthemevariable: iimb-theme !global;
 //$dark-color: #ea281f; //Link Color
 
 //IITBombayX - main-color and link color change by Nitin Ayer
-$main-color: #EC5A1A;
-$dark-color: #F7691F; //Link Color
+//$main-color: #EC5A1A;
+//$dark-color: #F7691F; //Link Color
+
+//IITBombayX: main-color and link-color changed for IIMB by Nitin Ayer-->
+$main-color: #9E0B0F;
+$dark-color: #B11117; //Link Color
 
 $light-color: #f4e00c; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
 //Main BG Color Variables
 //$main-bg: #822537; //IITBombayX- Original main-bg color
-$main-bg: #AD4A16;//IITBombayX- main-bg color chnage by Nitin Ayer
+//$main-bg: #AD4A16;//IITBombayX- main-bg color chnage by Nitin Ayer
+//IITBombayX:main-bg color changed for IIMB by Nitin Ayer
+$main-bg: #8B0304;//IITBombayX- main-bg color chnage by Nitin Ayer
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
 $main-bg-25: lighten($main-bg, 25%); 
 
@@ -108,7 +114,9 @@ $very-light-text: $gray-1;
 
 $link-color: $dark-color;
 $link-color-d1: $dark-color;
-$link-hover: $light-color;
+//IITBombayX: Eucalyptus change: link-hover color chnaged by Nitin Ayer
+//$link-hover: $light-color;
+$link-hover: $link-color;
 $site-status-color: $bg-color;
 
 $header-graphic-super-color: $dark-color;
