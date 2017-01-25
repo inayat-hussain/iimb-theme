@@ -11,8 +11,9 @@
 // running paver commands.
 $customthemevariable: iimb-theme !global;
 
+//IITBombayX: Font import is commented for IIMB, Author: Nitin Ayer, Date: 25/01/2017
 //IITBombayX-2016, Importing EKmukta hindi font, added by Nitin Ayer.
-@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:400,200,300,500,600,700,800);
+//@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:400,200,300,500,600,700,800);
 
 //-----------------
 //  Color variables (from Stanford palette unless noted)
@@ -320,6 +321,76 @@ $iitbx_faq_image02: url('../#{$customthemevariable}/images/FAQ/arrow_down.png');
 	font-family: $font_family1;
 }
 
+
+//IITBombayX: CSS for Course search box in header, Author: Nitin Ayer, Date: 25/01/2017
+ .header-global .nav-global .title{
+  margin: 0px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0px;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+  transition: all 0.2s linear 0s;
+  position: relative;
+  min-height: 100%;
+  vertical-align: top;
+  margin-top: -8px;
+ }
+
+ .header-global .nav-global .title form{
+  display: inline-block;
+ }
+
+ .header-global .nav-global .course-search .search-input{
+  height: 40px;
+  z-index: 10;
+  float: left;
+  padding-right: 55px;
+  padding-left: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  width: 230px;
+  color: $black;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  font-family:$font_family1;
+}
+
+ .header-global .nav-global .course-search .search-button{
+  height: 40px;
+  border: 2px solid transparent;
+  background: transparent;
+  z-index: 100;
+  right: 0px;
+  border-bottom-left-radius: 1px;
+  position: absolute;
+  color: $white;
+  text-shadow: none;
+  box-shadow: none;
+  padding: 0 14px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+ .header-global .nav-global .title .course-search .search-button:hover{
+  background: transparent;
+ }
+
+ .header-global .nav-global .title .course-search .search-button:focus{
+  background: transparent;
+ }
+
+ .header-global .nav-global .fa{
+  color: $m-gray;
+  font-size: 22px
+ }
+
+ .header-global .nav-global .title .course-search .search-input:focus{
+  border: 2px solid $gray-1;
+ }
 
 //IITBombaYX-2015, New SCSS files related static pages imported.
 @import '../../index_page'; //IITBombayX-2015, Added by Nitin Ayer, to compile new SCSS file related to index page

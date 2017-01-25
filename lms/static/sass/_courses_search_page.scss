@@ -51,4 +51,29 @@
  .search-facets.phone-menu{
    margin-top: 40px;
   }
+
+  .find-courses .search-facets.phone-menu {
+   display:none;
+ }
+
+ .find-courses .courses-container .courses:not(.no-course-discovery) {
+   width:100% !important;
+ }
+
+ .find-courses .courses-container .courses-listing-item:nth-child(3n+1) {
+  clear: initial !important;
+ }
+
+ .find-courses .courses-container .courses-listing-item:nth-child(4n+1) {
+  clear: left !important;
+ }
+
+ .find-courses .courses-container .courses-listing .courses-listing-item {
+  margin: 15px 7px 15px 8px !important;
+  width: calc(25% - 15px) !important;
+ }
+
+ .header-global .nav-global-04{
+  display:none;
+ }
 }

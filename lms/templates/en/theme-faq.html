@@ -14,7 +14,7 @@
 <body>
 <section class="container about">
 	<div class="main_content">
-		<div class="banner"><img src=${static.url('../static/'+settings.THEME_NAME+'/images/FAQ/faq_banner.png')} width="960px"></div>
+		<div class="banner"><img src=${static.url('images/FAQ/faq_banner.png')} width="960px"></div>
 			<div class="wrapper">
 				<div class="wrapper-container">
 					<div class="wrapper-inner">
@@ -29,12 +29,11 @@
 
 								<ul class="sidemenu">
 								<li><a class="links" href="${marketing_link('ABOUT')}">ABOUT</a></li>
-								<li><a class="links" href="${marketing_link('RESEARCH')}">RESEARCH & PEDAGOGY</a></li>
 								  <!--IITBombayX: Blog and News URL changed for IIMB-->
+							          <!--IITBombayX: Research & Pedagogy and FAQ Links removed for IIMB-->
 								<li><a class="links" href="https://iimbxonline.wordpress.com/" target="_blank">BLOG</a></li>
 								<li><a class="links" href="http://www.iimb.ernet.in/node/7383" target="_blank">NEWS</a></li>
-								<li><a class="links-active" href="${marketing_link('FAQ')}">LEARNERS FAQ</a></li>
-								<li><a class="links" href="${marketing_link('PLATFORM_FAQ')}">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} FAQ</a></li>
+								<li><a class="links-active" href="${marketing_link('FAQ')}">FAQ</a></li>
 								<li><a class="links" href="${marketing_link('CONTACT')}">CONTACT US</a></li>
 								</ul>
                                 
