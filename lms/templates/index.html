@@ -1,0 +1,115 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<!--IITBombayX: Language code commented for IIMB-->
+<%namespace name='static' file='static_content.html'/>
+<%doc><%include file='modal/_modal-settings-language.html' /></%doc>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<%block name="pagetitle">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</%block>
+<%block name="bodyclass">index-page</%block><!--IITBombayX-2015 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-29/12/2015, CSS for banner image, text on banner image and course tile background is written in _index_page.scss by Nitin Ayer-->
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="home">
+      <header>
+        <!--<div class="outer-wrapper">
+          <div class="title">
+            <div class="heading-group">
+              % if homepage_overlay_html:
+                ${homepage_overlay_html | n, decode.utf8}
+              % else:
+                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
+                  <h1>${Text(_(u"Welcome to the Open edX{registered_trademark} platform!")).format(registered_trademark=HTML("<sup style='font-size: 65%'>&reg;</sup>"))}</h1>
+                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
+                  <p>${_("It works! This is the default homepage for this Open edX instance.")}</p>
+              % endif
+            </div>
+            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+              <div class="course-search">
+                <form method="get" action="/courses">
+                  <label><span class="sr">${_("Search for a course")}</span>
+                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+                  </label>
+                  <button class="search-button" type="submit">
+                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+                  </button>
+                </form>
+              </div>
+            % endif
+
+          </div>
+
+          % if show_homepage_promo_video:
+            <a href="#video-modal" class="media" rel="leanModal">
+              <div class="hero">
+                <div class="play-intro"></div>
+              </div>
+            </a>
+          % endif
+        </div>-->
+
+	<!--<div class="banner_text">
+		<div class="banner_inner-text">
+			<div class="banner_tagline">
+				<p class="banner_tagline_text">${_("Take great")} <strong>${_("online courses")}</strong> ${_("from")}</p>
+				<p class="banner_tagline_text">${_("one of India's")} <strong>${_("best Institutes")}</strong></p>
+                                   % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+					<div class="title">
+					  <div class="course-search">
+					    <form method="get" action="/courses">
+						<input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+						<button class="search-button" type="submit">
+							<i class="icon fa fa-search" aria-hidden="true"></i>
+						</button>
+					    </form>
+					  </div>
+					</div>
+				   % endif
+			</div>
+		</div>
+	</div>-->
+      </header>
+	<div class="tagline_container">
+		<div class="tagline_content">
+			<div class="tagline">
+				<h2 class="tagline_text">${_("{platform_name} online courses").format(platform_name=settings.PLATFORM_NAME)}</h2>
+				<p>&#9660;</p>
+			</div>
+		</div>
+	</div>
+      <%include file="${courses_list}" />
+
+    </section>
+</main>
+
+<!--IITBombayX: Homepage overlay video code is commented, Author: Nitin Ayer, Date: 25/01/2017-->
+<%doc>% if show_homepage_promo_video:
+  <section id="video-modal" class="modal home-page-video-modal video-modal">
+    <div class="inner-wrapper">
+      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+% endif</%doc>
+
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+</%block>
+
+% if show_signup_immediately is not UNDEFINED:
+  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+  ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+  $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif
