@@ -134,10 +134,20 @@ site_status_msg = get_site_status_msg(course_id)
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
 	      <li class="nav-global-01">
-                <a class="cta cta-register" href="${marketing_link('ABOUT')}">${_("About")}</a>
+<!--
+#Release: Eucalyptus.3 for IIMB
+#Description: ABOUT page marketing URL map changed for IIMB 
+#Author: Nitin Ayer
+#Date: 08/02/2017-->
+                <a class="cta cta-register" href="${marketing_link('ABOUT_OVERVIEW')}">${_("About")}</a>
               </li>
+<!--
+#Release: Eucalyptus.3 for IIMB
+#Description: HOW IT WORKS page URL chnaged to PROGRAMMES page for IIMB 
+#Author: Nitin Ayer
+#Date: 07/02/2017-->
 	      <li class="nav-global-02">
-                <a class="cta cta-register" href="${marketing_link('HOW_IT_WORKS')}">${_("Programmes")}</a>
+                <a class="cta cta-register" href="${marketing_link('PROGRAMMES_PAGE')}">${_("Programmes")}</a>
               </li>
               <li class="nav-global-03">
                 <!--IITBombayX: Explore Courses changed to Courses-->

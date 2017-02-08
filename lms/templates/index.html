@@ -14,6 +14,22 @@ from openedx.core.djangolib.markup import HTML, Text
 <%block name="bodyclass">index-page</%block><!--IITBombayX-2015 Nitin Ayer, block is added to identify CSS in SCSS files-->
 <!--IITBombayX-29/12/2015, CSS for banner image, text on banner image and course tile background is written in _index_page.scss by Nitin Ayer-->
 
+<!--
+#Release: Eucalyptus.3 for IIMB
+#Description: JAVA script added for tagline text formatting
+#Author: Nitin Ayer
+#Date: 02/02/2017-->
+
+<script type='text/javascript' defer>//<![CDATA[
+$(window).load(function(){
+$('#tagline').each(function(){
+    var $this = $(this);
+    var t = $this.text();
+    $this.html(t.replace('&lt','<').replace('&gt', '>'));
+});
+});//]]>
+</script>
+
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
@@ -77,7 +93,12 @@ from openedx.core.djangolib.markup import HTML, Text
 	<div class="tagline_container">
 		<div class="tagline_content">
 			<div class="tagline">
-				<h2 class="tagline_text">${_("{platform_name} online courses").format(platform_name=settings.PLATFORM_NAME)}</h2>
+<!--
+#Release: Eucalyptus.3 for IIMB
+#Description: Variable added to change the tagline text on home page
+#Author: Nitin Ayer
+#Date: 02/02/2017-->
+                                <h2 class="tagline_text" id="tagline">${settings.PLATFORM_HEADER_TAGLINE}</h2>
 				<p>&#9660;</p>
 			</div>
 		</div>
