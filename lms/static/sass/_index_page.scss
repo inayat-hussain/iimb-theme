@@ -2,8 +2,9 @@
 
 .index-page {
   .header-global nav {
-   max-width: 1170px;
-   width: 1170px;
+   max-width: 1200px;
+   width: 1200px;
+   padding: 18px 0px 0px 0px;
  }
 
  .header-global{
@@ -12,9 +13,9 @@
  }
 
  .wrapper-footer footer {
-   width: 1170px !important;
-   max-width: 1170px !important;
-   padding: 0px 15px 0px 15px;
+   width: 1200px !important;
+   max-width: 1200px !important;
+   padding: 0px;
  }
 
  .wrapper-footer footer .open-edx_logo, #footer-openedx .open-edx_logo {
@@ -222,5 +223,34 @@
 
  .home > header .title .course-search .search-input:focus{
   border: 2px solid $gray-1;
+ }
+
+ .programmes{
+   background-color: $course_block-bg;
+   box-shadow: 0px 8px 8px -8px rgba(0, 0, 0, 0.1) inset, 0px -8px 8px -8px rgba(0, 0, 0, 0.1) inset;
+   margin:auto;
+   padding: 40px;
+   margin-top: 40px;
+   max-width: 1120px;
+ }
+
+ .programmes ul {
+   padding: 0px;
+   margin: 0px;
+ }
+
+ .programmes ul li{
+   display: inline-block;
+   margin: auto;
+   width: 33%;
+   text-align: center;
+   font-family: $font_family1;
+ }
+
+ .programme_text{
+  font-family: $font_family1;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 20px;
  }
 }

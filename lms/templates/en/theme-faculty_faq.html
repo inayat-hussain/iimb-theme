@@ -6,7 +6,7 @@
 <!--IITBombayX: language setting commented as it is not required and microsite configuration removed-->
 <!--IITBombayX: main.html and static_content.html file path changed-->
 
-<%block name="pagetitle">${_("About")}</%block>
+<%block name="pagetitle">${_("Faculty Development Programme")}</%block>
 <%block name="bodyclass">about_page_en</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
 <!--IITBombayX-2016, CSS for this page is written in _about_page.scss inside theme folder by Nitin Ayer-->
 
@@ -17,13 +17,14 @@
 
 <section class="container about">
 	<div class="main_content">
-		<div class="banner"><img src=${static.url('images/about-us.png')} width="960px"></div>
+		<div class="banner"><img src=${static.url('images/facultydevelopment.png')} width="1200px"></div>
     			<div class="wrapper">
        				<div class="wrapper-container">
        					<div class="wrapper-inner">
+                                                <div class="tagline"><h2 class="tagline_text">Faculty Development Programme</h2></div>
         					<div class="inner-class">
                 					<div class="inner-content">
-								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+								<table border="0" width="1200px;" height="600px;" cellpadding="0" cellspacing="0">
 
 								<tr>
 
@@ -31,13 +32,13 @@
 								<div class="sidebar">
 
 								<ul class="sidemenu">
-								<li><a class="links-active" href="${marketing_link('FACULTY_OVERVIEW')}">Overview</a></li>
+								<li><a class="links" href="${marketing_link('FACULTY_OVERVIEW')}">Overview</a></li>
 							          <!--IITBombayX: Blog and News URL changed for IIMB-->
 							          <!--IITBombayX: Research & Pedagogy and FAQ Links removed for IIMB-->
 								<!--<li><a class="links" href="https://iimbxonline.wordpress.com/" target="_blank">BLOG</a></li>
 								<li><a class="links" href="http://www.iimb.ernet.in/node/7383" target="_blank">NEWS</a></li>-->
 								<li><a class="links" href="${marketing_link('FACULTY_DETAILS')}">Details</a></li>
-								<li><a class="links" href="${marketing_link('FACULTY_FAQ')}">FAQ</a></li>
+								<li><a class="links-active" href="${marketing_link('FACULTY_FAQ')}">FAQ</a></li>
 								</ul>
 
 								</div>
@@ -46,55 +47,17 @@
 								<td class ="table_column02" width="743px">
 								<section class="inner-section">
 
-								<h2 class="field-page-tagline view-mode-full"><strong>THIS IS Faculty
-Development FAQ PAGE</strong></h2>
-								<h2 class="field-page-tagline view-mode-full"><strong>Knowledge Anytime, Anywhere.</strong></h2>
+								<!--<h2 class="field-page-tagline view-mode-full"><strong>Knowledge Anytime, Anywhere.</strong></h2>-->
 
 								<div class="field-page-body view-mode-full">
-                                                                <p><strong>About ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</strong><p>
-								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}, is a programme started in <b> August 2014 by IIM Bangalore</b> with the aim of providing access to world-class education in management to every interested learner in India and across the world. IIMB believes in the disruptive power of technology and is committed to leveraging digital channels to bring our motto of radiant learning to life. The Institute aims to achieve this goal by offering Massive Open Online Courses (MOOCs) starting from July 2015 through edX, a not-for-profit online initiative of Harvard and MIT that offers online courses from the world's best universities and organizations.</p>
+                                                                <p style="margin-bottom: 0px;"><strong>How to enrol for this Programme?</strong></p>
+								<p>IIM Bangalore offers Faculty Development Programmes at regular intervals throughout the year. For upcoming session details, visit <a class="links-active2" href="http://www.iimb.ernet.in/node/14730" traget="_blank">Faculty Development at IIMB.</a></p>
 
-								<p><strong>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Mission:</strong></p>
+								<p style="margin-bottom: 0px;"><strong>What Certificates will learners receive?</strong></p>
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Participation certificate on <i>Using Blended MOOCs in Management</i> is provided to learners.</p>
 
-								<ul class="ul-class">
-								<p><li>To deliver world-class MOOCs in management to learners across the globe and create positive social impact using educational technology.</li></p>
-								</ul>
-
-                                                                <p><strong>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Goals:</strong></p>
-
-								<ul class="ul-class">
-								<li>To make world-class management education accessible from every part of the world.</li>
-								<li>To empower less privileged learners in India through innovative use of technology.</li>
-								<li>To improve in-classroom teaching and learning.</li>
-                                                                </ul>
-                                                                
-                                                                <p><strong>How ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} benefits learner:</strong></p>
-  
-								<ul class="ul-class">
-								<li>Online management courses from IIMB faculty</li>
-								<li>Interactive learning through instructionally designed courses</li>
-								<li>Learning beyond time line boundaries.</li>
-                                                                <li>Learners don't need a degree to follow the course, only the willingness to learn.</li>
-								<li>IIMBx Certificate to enhance professional career</li>
-							
-
-                                                                </ul>
-								
-                                                                <p><strong>HOW ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} benefits faculty:</strong></p>
-
-								<ul class="ul-class">
-								<li>Provides more advanced technology and tools to the faculty.</li>
-								<li>Provides further pedagogical support with integration of existing resources.</li>
-								<li>Platform is open to experiments for faculty to build broader learner management system.</li>
-                                                                </ul>
-                                    
-                                                                <p><strong>What ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}is not:</strong></p>
-
-								<ul class="ul-class">
-								<li>It does not offer online diplomas or degrees.</li>
-								<li>Not merely a Learning Management system.</li>
-								<li>Doesn't include static courses.</li>
-                                                                </ul>
+								<p style="margin-bottom: 0px;"><strong>Any other queries?</strong></p>
+								<p>For any other queries, check <a class="links-active2" href="${marketing_link('FAQ')}">General FAQ</a></p>
 								</div>
 								</section>
 								</td>

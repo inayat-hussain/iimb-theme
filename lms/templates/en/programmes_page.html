@@ -6,7 +6,7 @@
 <!--IITBombayX: main.html and static_content.html file path changed-->
 <!--Updated by Bab-->
 
-<%block name="pagetitle">${_("How It Works")}</%block>
+<%block name="pagetitle">${_("Programmes")}</%block>
 
 <%block name="bodyclass">how_it_works</%block><!--IITBombayX-2015 Nitin Ayer, block is added to identify CSS in SCSS files-->
 
@@ -20,63 +20,36 @@
 <body>
 	<div class="outer_content">
 		<div class="main_content">
-			<div class="banner"><img src=${static.url('images/how-it-works/how-it-works_english.jpg')} width="960px"></div>
+			<div class="banner"><img src=${static.url('images/Programmes.png')} width="1200px"></div>
 				<div class="container">
-					<div class="newsline">${_('Study, have fun, uncover a new passion or learn skills that may just change your life.')}</div>
-						<div class="cmsdata">
+					<div class="tagline"><h2 class="tagline_text">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Programmes</h2></div>
+					<div class="field-page-body view-mode-full">
+						<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offers online courses in management discipline through various programmes.</p>
+						<p>There are three major programme formats offered by ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}.</p>
+						<p><strong>Academic Partnership</strong> for students at undergraduate and graduate levels to gain business and managerial skills alongside their professional degree.</p>
+						<p><strong>Corporate Partnership</strong> for working professionals to advance their professional journey through specialized electives for a distinctive edge at work.</p>
+						<p><strong>Faculty Development Programme</strong> for instructors to remodel the teaching-learning experience using technology</p>
 
-						<p class="banner_block_01" >
-						<strong>Experience<br>Real Classroom <br>Learning</strong><br>
-						Classroom<br>
-						Experience<br>
-						with dual benefits:<br>
-						self-paced learning,<br>
-                                                100% online courseware<br>
-						and the flexibility <br>
-						that you like coupled<br>
-						with the virtual classroom<br>
-                                                learning experience that you enjoy.<br><!--<br>Check out the new <a href="/courses/IIMBX/2015_2016/about" class="links-active" target="_blank">${_('{platform_name} Demo course').format(platform_name=settings.PLATFORM_NAME)}</a>.--></p>
-						<!--IITBombayX: Demo course reference removed temporarily-->
-						<p class="banner_block_02">
-						<strong>Get Quality <br>Management Education </strong><br>
-						Learn from some<br>
-						of the best <br>
-						bset Business Faculty <br>
-						at IIMB through<br>& 
-						our online courses.<br> Our specialized delivery<br> is tailored to to ensure that every<br>student masters the subject.</p>
+</p>
+					</div>
 
-						<p class="banner_block_03">
-						<strong>Jump-start your Career</strong><br><br>
-						Earn a certificate from<br>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}in various business &<br>
-						management disciplines while you <br>
-						study or work, to give your <br> 
-						professional career the impetus it deserves.<br></p>
+					<div class="programmes">
+						<ul>
+							<li><div class="programme_text"><p>Academic Partnership</p></div>
+							    <div><img src=${static.url('images/Academic_icon.png')} width="200px;" /></div>
+							    <p class="programme_link"><a href="${marketing_link('ACADEMIC_OVERVIEW')}">Know more</a></p>
+							</li>
+                                                        <li><div class="programme_text"><p>Corporate Partnership</p></div>
+                                                            <div><img src=${static.url('images/professional_icon.png')} width="200px;" /></div>
+                                                            <p class="programme_link"><a href="${marketing_link('PROFESSIONAL_OVERVIEW')}">Know more</a></p>
+                                                        </li>
+                                                        <li><div class="programme_text"><p>Faculty Development</p></div>
+                                                            <div><img src=${static.url('images/Faculty_Development_icon.png')} width="200px;" /></div>
+                                                            <p class="programme_link"><a href="${marketing_link('FACULTY_OVERVIEW')}">Know more</a></p>
+                                                        </li>
 
-						
-						<!--IITBombayX: Demo course reference removed temporarily-->
-						<p class="learn_more_tagline"><!--Learn more: take the new
-						   <a href="/courses/IIMBX/IIMBX/2015_2016/about" class="links-active" target="_blank">${_('{platform_name} Demo course').format(platform_name=settings.PLATFORM_NAME)}</a>
-						   . -->More questions?&nbsp;<a href="${marketing_link('FAQ')}" class="links-active" target="_blank">Read our FAQ</a>
-						</p>
-
-						<h2 class="learner_tagline">Become an ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} learner, it's easy...</h2>
-						<div class="outer_steps">
-						<div class="inner_steps">
-						<ul class="how-it-works-steps">
-						<li><strong>Find your new course</strong>Search the Courses Page and explore topics and professors. We are always adding more.</li>
-						<li><strong>Review and choose</strong>Read through the course prerequisites and time commitment, so you know what to expect.</li>
-						<li><strong>Become an <font class="platform_name_small_caps">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</font><br>learner</strong>Just click "Register Now". Both ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} and the classes are free. (Yes, really!)</li>
-						<li><strong>Start studying and have fun</strong>Crack the virtual books, start studying and connect with others online - and have fun!</li>
-                                                <div class="clearer"></div><!--IITBombayX-2016 Do not remove this DIV tag-->
 						</ul>
-						</div>
-						</div>
-
-						<div class="submit">
-                                                   <input type="submit" value="Find a Course and Start Learning Now" onClick="location.href='/courses'"></input>
-
-        					</div>
-
+					</div>
 				</div>
 			</div>
 		</div>
