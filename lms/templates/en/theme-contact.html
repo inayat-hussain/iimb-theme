@@ -25,7 +25,7 @@
 					<div class="wrapper-inner">
 						<div class="inner-class">
 							<div class="inner-content">
-								<table border="0" width="1200px;" cellpadding="0" cellspacing="0">
+								<table border="0" width="1200px;" height="500px;" cellpadding="0" cellspacing="0">
 
                   						<tr>
 
@@ -53,14 +53,12 @@
 
 								<p>Hello!  Already an ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} learner? Do you have questions, suggestions or issues about a specific course? Please post on your course’s discussion forum.</p>
 
-								<p>Not a learner yet and have a general question about ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}?</p>
+								<p>Not a learner yet and have a general question about ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}?&nbsp;Please visit our <a href="${marketing_link('FAQ')}" class="links-active2" target="_blank">FAQs</a>.</p>
 
-								<p>Please visit our <a href="${marketing_link('FAQ')}" class="links-active2" target="_blank">FAQs</a>.</p>
-
-								<p>Still need help or want to give us general feedback?&nbsp;Contact us.</p>
+								<p>Still need help or want to give us general feedback?&nbsp;<a class="links-active2" href="mailto:digital.learning@${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in">Contact us.</a></p>
 								<br>
 
-								<p><strong>E Mail IDs:</strong></p>
+								<!--<p><strong>E Mail IDs:</strong></p>
                              
 								<p>
 								<strong>For Administration:&nbsp;</strong>
@@ -80,8 +78,7 @@
 								<p>
 								<strong>For Course Support:&nbsp;</strong>
 								<a href="mailto:mooc.support@${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.ac.in" class="links">mooc.support@${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in</a>
-								</p>
-
+								</p>-->
 								</div>
 								</section>
 
