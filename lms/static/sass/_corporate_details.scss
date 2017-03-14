@@ -1,0 +1,462 @@
+//Release: Eucalyptus.3 for IIMB
+//Description: This file contains CSS related to Corporate Programme at a Glance page.
+//Author: Nitin Ayer
+//Date: 12/03/2017
+
+.corporate_details {
+//CSS for header
+  .header-global nav {
+   max-width: 1200px;
+   width: 1200px;
+   padding: 10px 0px 0px 0px;
+  }
+
+  .header-global{
+   position: fixed;
+   top: 0px;
+
+   .nav-global {
+    margin-top: 18px;
+
+    li {
+   vertical-align: top;
+   }
+  }
+
+    h1.logo a img {
+    height: 70px;
+  }
+ }
+
+//CSS for content-wrapper div
+ .content-wrapper{
+  margin-top: 76px;
+  background: $white;
+  padding-bottom: 0px;
+ }
+
+//CSS added for header option highlight
+ .nav-global-02 a {
+  color: $link-color !important;
+ }
+
+ .outer_container{
+  width: auto;
+  margin: auto;
+ }
+
+ .main_content{
+  width: 1200px;
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
+  background: $white;
+ }
+
+ .banner{
+  border-bottom: 1px solid $border-color-l3;
+ }
+
+ .main_banner{
+  display: block;
+ }
+
+ .tagline{
+  padding: 0px;
+  margin: auto;
+  display: block;
+
+  h2 {
+  color: $link-color;
+  font-family: $font_family1;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-transform: none;
+  text-align: center;
+  display: block;
+  margin: 0px;
+  padding: 30px 0px 30px 0px;
+  }
+ }
+
+ .content{
+  width: 100%;
+  margin:auto;
+  height: auto;	
+  display: flex;
+ }
+
+ .left_content{
+  display:inline-block;
+  width: 22%;
+  float:left;
+  background: $table-coloumn_bg;
+ }
+
+ .right_content{
+  display: inline-block;
+  width: 78%;
+ }
+
+ .sidebar{
+  margin: 30px;
+  padding: 0px;
+ }
+
+ .sidemenu{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  box-sizing: border-box;
+
+  li {
+  font-family: $font_family1;
+  font-size: 14px;
+  font-weight: 600;
+  color: $white;
+  line-height: normal;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 20px 0px 20px 0px;
+  }
+ }
+
+ .right_content_text{
+  padding: 45px 20px 45px 45px;
+
+  p {
+   font-family: $font_family1;
+   font-size: 16px;
+   color: $black_font_color;
+   line-height: 1.5em;
+   letter-spacing: normal;
+
+   strong {
+    color: $black_font_color;
+    font-weight: 700;
+   }
+  }
+ }
+
+ .question{
+  font-weight:700;
+  margin: 0px 0px 5px 0px;
+ }
+
+ .answer{
+  margin: 0px 0px 20px 0px;
+ }
+
+ .header_text_first {
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 700;
+  color: $link-color;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 0px 0px 15px 0px;
+  text-transform: none;
+ }
+
+ .header_text {
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 700;
+  color: $link-color;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  margin: 30px 0px 15px 0px;
+ }
+
+ .ul_class {
+  margin: 0px;
+  padding: 10px 0px 40px 15px;
+  line-height: 1.5em;
+  letter-spacing: normal;
+  font-size: 16px;
+  color: $black_font_color;
+  list-style-image: url('../images/red_dot.png');
+
+  li > span {
+  color: $link-color;
+  }
+ }
+
+ .image_layer {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: block;
+  padding: 40px 0px 40px 0px;
+  height: 202px;
+
+  ul {
+   margin: 0px;
+   padding: 0px;
+   list-style:none;
+   display:inline-block;
+   height:100%;
+
+   li {
+    display: inline-block;
+    margin: 0px 10px 0px 0px;
+    height:100%;
+
+    &:last-child {
+     margin: 0px;
+    }
+
+    img{
+     width: 195px;
+    }
+   }
+  }
+ }
+
+ .image_text {
+  position: relative;
+  top: -195px;
+  font-family: $font_family1;
+  line-height: normal;
+
+  h2 {
+   margin: 0px;
+   padding: 0px 0px 5px 0px;;
+   font-size: 14px;
+   color: $link-color;
+   font-family: $font_family1;
+   text-transform: none;
+   font-weight: 600;
+   letter-spacing: 0;
+   line-height: normal;
+  }
+ }
+
+ .data_faculty{
+  padding: 10px 0px 5px 0px !important;
+ }
+
+ .image_text_number {
+  margin: 0px;
+  padding:0px;
+  line-height: normal !important;
+  color: $white !important;
+  font-size:74px !important;
+  font-style:italic;
+  font-weight:400;
+  font-family: $font_family1;
+ }
+
+ .image_text_data {
+  margin: 0px;
+  padding:0px;
+  line-height: 49% !important;
+  color: $white !important;
+  font-size:74px !important;
+  font-style:italic;
+  font-weight:400;
+  font-family: $font_family1;
+ }
+
+ .text_data_one {
+  font-size: 68px;
+  vertical-align: sub;
+  font-family: $font_family1;
+ }
+
+ .text_data_two {
+  font-size: 32px;
+  line-height: 150%;
+  font-family: $font_family1;
+  vertical-align: bottom;
+ }
+
+ .text_data_faculty {
+  font-size: 68px;
+  vertical-align: middle;
+  font-family: $font_family1;	
+ }
+
+ .image_text_text{
+  margin: 0px;
+  padding: 0px;
+  font-size: 11px !important;
+  line-height:18px !important;
+  color: $black_font_color;
+  font-weight: 700;
+  font-family: $font_family1;
+ }
+
+ .brochure_download{
+  width:100%;
+  padding: 40px 0px 50px 0px;
+  text-align:center;
+  display:block;
+
+  a {
+   background:url('../images/academic/academic_image03.png');
+   background-size:100%;
+   background-repeat:no-repeat;
+   color: $white !important;
+   text-decoration:none;
+   padding: 0px 35px 0px 30px;
+   text-align:center;
+   font-size:14px;
+   font-weight:600;
+  }
+ }
+
+ .image_layer_two{
+  width: 100%;
+  margin: auto;
+  display: block;
+  padding: 40px 0px 40px 0px;
+  height: 278px;
+  overflow: hidden;
+  text-align:center;
+
+  ul{
+   margin: 0px;
+   padding: 0px;
+   list-style: none;
+   height: inherit;
+
+   li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    height: inherit;
+
+    &:last-child{
+     margin-right:0px;
+    }
+
+    img{
+     width: 260px;
+    }
+   }
+  }
+ }
+
+
+ .image_over_text_one{
+  position: relative;
+  top: -260px;
+  left: 80px;
+  padding: 70px 0px 0px 0px;
+  display:table;
+ }
+
+ .image_over_text_two{
+  position: relative;
+  top: -260px;
+  left: 80px;
+  padding: 110px 0px 0px 0px;
+  display:table;
+ }
+
+ .image_over_text_one > p, .image_over_text_two > p{
+  margin: 0px;
+  padding: 5px 0px 5px 0px;
+  color: $white;
+  letter-spacing: 0;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  line-height: inherit;
+
+ }
+
+ .tagline_inner > h2{
+  font-family: $font_family1;
+  font-size: 22px;
+  font-weight: 400;
+  color: $link-color;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 50px 0px 15px 0px;
+  text-align: center;
+  text-transform: none;
+ }
+
+ .testimonial{
+  width: 100%;
+  display: block;
+  padding: 15px 40px 15px 40px;
+  margin: 80px 0px 40px 0px;
+  background:url('../images/faculty/faculty_image03.png');
+  background-size: 100% 100%;
+  background-repeat:no-repeat; 
+
+  p {
+   margin:auto;
+   color: $white;
+   line-height: normal;
+   letter-spacing: 0;
+   font-family: $font_family1;
+  }
+
+  .testimonial_title {
+   font-size: 16px;
+   font-style:italic;
+   font-weight: 400;
+  }
+
+  .testimonial_quote{
+   font-size: 14px;
+   font-weight: 600;
+  }
+
+  .testimonial_signature{
+   font-size: 14px;
+   font-weight: 400;
+   font-style: italic;
+  }
+ }
+
+ .text_layer{
+  width:100%;
+  max-width:100%;
+  height:100%;
+  margin:auto;
+  padding: 20px 0px 20px 0px;
+  display: flex;	
+
+  ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+
+  li{
+   height:inherit;
+   display:table;
+   display: inline-block;
+   width: 30%;
+   padding:20px 0px 0px 0px;
+   margin:0px;
+   float:left;
+   vertical-align:text-top;
+
+   &:nth-child(2n){
+    border-left: 1px solid $link-color;
+    border-right: 1px solid $link-color;
+    padding:20px 20px 20px 20px;
+    margin:0px 20px 0px 20px;
+    }
+
+   p {
+     margin: auto;
+     font-size: 14px;
+     color: $black_font_color;
+     font-weight: 400;
+     line-height:normal;
+     letter-spacing:0;
+    }
+   }
+  }
+ }
+}

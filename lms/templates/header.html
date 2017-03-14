@@ -2,13 +2,17 @@
 <%! from django.core.urlresolvers import reverse %>
 <%namespace name='static' file='/static_content.html'/>
 <%inherit file="/navigation.html"/>
-<!-- IITBombayX - using custom variable name for theme name instead of hard coding -->
-<!-- 06th Jan 2016 -->
-
 
 ## TODO: this will eventually be moved to the Sass
 <%block name="navigation_logo">
-  <!--IITBombayX: Eucalyptus change: Logo URL path changed for comprehensive theming-->
-  <img src=${static.url('images/headerlogo.png')} alt="Home Page" />
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: If condition added to check which logo to display, on basis of student is logged in or not
+Author: Nitin Ayer
+Date: 06/03/2017-->
+        % if user.is_authenticated():
+                <img src=${static.url('images/headerlogo.png')} alt="Home Page" />
+        % else:
+                <img src=${static.url('images/headerlogo_institute.png')} alt="Home Page" />
+        % endif:
 </%block>
-

@@ -1,78 +1,159 @@
 <%inherit file="../main.html" />
-<!--Bharat Moocs Added on 23 Sep for language option -->
-<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
 <%namespace name='static' file='../static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
-<!--IITBombayX: language setting commented as it is not required and microsite configuration removed-->
-<!--IITBombayX: main.html and static_content.html file path changed-->
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: language setting commented as it is not required
+Author: Nitin Ayer
+Date: 11/03/2017-->
+<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
 
 <%block name="pagetitle">${_("Faculty Development Programme")}</%block>
-<%block name="bodyclass">about_page_en</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
-<!--IITBombayX-2016, CSS for this page is written in _about_page.scss inside theme folder by Nitin Ayer-->
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: bodyclass block added to write CSS in SCSS file and SCSS for this page is in _faculty_details.scss file in themes directory
+Author: Nitin Ayer
+Date: 11/03/2017-->
+<%block name="bodyclass">faculty_details</%block>
 
 <html>
 <head>
 </head>
 <body>
-
-<section class="container about">
+<div class="outer_container">
 	<div class="main_content">
-		<div class="banner"><img src=${static.url('images/facultydevelopment.png')} width="1200px"></div>
-    			<div class="wrapper">
-       				<div class="wrapper-container">
-       					<div class="wrapper-inner">
-						<div class="tagline"><h2 class="tagline_text">Faculty Development Programme</h2></div>
-        					<div class="inner-class">
-                					<div class="inner-content">
-								<table border="0" width="1200px;" height="600px;" cellpadding="0" cellspacing="0">
 
-								<tr>
+		<div class="banner">
+			<img class="main_banner" src=${static.url('images/faculty/faculty.png')}>
+		</div>
 
-								<td class ="table_column01" width="217px" valign="top">
-								<div class="sidebar">
+		<div class="tagline">
+			<h2>Faculty Development Programme</h2>
+		</div>
 
-								<ul class="sidemenu">
-								<li><a class="links" href="${marketing_link('FACULTY_OVERVIEW')}">Overview</a></li>
-							          <!--IITBombayX: Blog and News URL changed for IIMB-->
-							          <!--IITBombayX: Research & Pedagogy and FAQ Links removed for IIMB-->
-								<!--<li><a class="links" href="https://iimbxonline.wordpress.com/" target="_blank">BLOG</a></li>
-								<li><a class="links" href="http://www.iimb.ernet.in/node/7383" target="_blank">NEWS</a></li>-->
-								<li><a class="links-active" href="${marketing_link('FACULTY_DETAILS')}">Details</a></li>
-								<li><a class="links" href="${marketing_link('FACULTY_FAQ')}">FAQ</a></li>
-								</ul>
+		<div class="content">
 
-								</div>
-								</td>
+			<div class="left_content">
+				<div class="sidebar">
+					<ul class="sidemenu">
+						<li><a class="links_sidebar" href="${marketing_link('FACULTY_OVERVIEW')}">Overview</a></li>
+						<li><a class="links-active" href="${marketing_link('FACULTY_DETAILS')}">Programme at a glance</a></li>
+						<li><a class="links_sidebar" href="${marketing_link('FACULTY_FAQ')}">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
 
-								<td class ="table_column02" width="743px">
-								<section class="inner-section">
+			<div class="right_content">
+				<div class="right_content_text">
+					<h2 class="header_text_first">The FDP is conducted in a blended format with online and face-to-face components.</h2>
+					<div class="tagline_inner">
+						<h2>Online Component</h2>
+					</div>
 
-								<!--<h2 class="field-page-tagline view-mode-full"><strong>Knowledge Anytime, Anywhere.</strong></h2>-->
+					<p class="answer">The online MOOC course provides an overview of blended MOOCs.</p>
 
-								<div class="field-page-body view-mode-full">
-								<p>The FDP is conducted in a blended fashion with online and face-to-face components.</p>
+					<ul class="ul_class">
+						<li>Prepare for the session by going through the pre-reads on how to blend online courses with in-class sessions</span></li>
+						<li>Interact with fellow faculty before attending the face-to-face sessions</li>
+					</ul>
 
-								<p><strong>Online component:&nbsp;</strong>Pre-reading is shared in online format 2-3 weeks in advance with an aim to prepare the participants with the right context on how blended online courses with in-class sessions. This also allows participants to have online discussions with fellow faculty before attending the face-to-face session.</p>
+					<div class="tagline_inner">
+						<h2>Classroom Component</h2>
+					</div>
 
-                                                                <p><strong>Classroom component:&nbsp;</strong>The programme is designed to be a day-long event with multiple sessions and tracks. This includes introduction to blended learning pedagogy, blended MOOC orientation sessions, panel discussions, and expert talks.</p>
+					<p class="answer">The programme is designed to be a day-long event with multiple sessions and tracks.</p>
 
-								<p>IIM Bangalore has conducted four Blended MOOC Faculty Development Programmes. More than 400 faculty from over 100 management institutions across India have attended the day-long workshops with an aim to become better digitally equipped faculty.</p>
-
-								<p>Click here for FDP Schedule and Agenda.</p>
-                                                                </ul>
-								</div>
-								</section>
-								</td>
-
-								</tr>
-								</table>
-							</div>
+					<div class="classroom_components">
+						<div class="components_one">
+							<img src=${static.url('images/faculty/faculty_image05.png')} />
+							<p>Blended Learning<br>Pedagogy</p>
 						</div>
+						<div class="components_two">
+							<img src=${static.url('images/faculty/faculty_image05.png')} />
+							<p>Blended&nbsp;MOOC<br>Orientation&nbsp;Sessions</p>
+						</div>
+						<div class="components_three">
+							<img src=${static.url('images/faculty/faculty_image05.png')} />
+							<p>Panel Discussions</p>
+						</div>
+						<div class="components_four">
+							<img src=${static.url('images/faculty/faculty_image05.png')} />
+							<p>Expert Talks</p>
+						</div>
+					</div>
+
+					<div class="tagline_inner">
+						<h2>FDP Sessions from ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</h2>
+					</div>
+
+					<div class="image_layer">
+						<ul>
+							<li>
+								<img src=${static.url('images/faculty/faculty_image04.png')} />
+								<div class="image_text">
+									<p class="image_text_number">
+									<span class="text_data_faculty">04</span></p>
+									<h2 class="data_faculty">FDP Programmes</h2>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/faculty/faculty_image04.png')} />
+								<div class="image_text">
+									<p class="image_text_number">
+									<span class="text_data_faculty">400+</span></p>
+									<h2 class="data_faculty">Faculty</h2>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/faculty/faculty_image04.png')} />
+								<div class="image_text">
+									<p class="image_text_number">
+									<span class="text_data_faculty">100+</span></p>
+									<h2 class="data_faculty">Management Institutions</h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="testimonial">
+						<!--<p class="testimonial_title">Title</p>-->
+						<p class="testimonial_quote">"The FDP-MOOCs @ IIMB (17Dec2016) was a stimulating experience to me a Faculty+ Learner; I shall integrate MOOCs now onwards more frequently. Gaining deeper insights on usage of MOOCs & Networking was good/ fruitful.”</p>
+						<p class="testimonial_signature">- Dr.Nandeesh V. Hiremath, Professor (HR & Entrepreneurship), Indus Business Academy (IBA), Bangalore</p>
+					</div>
+
+					<div class="tagline_inner">
+						<h2>Get Started</h2>
+					</div>
+
+					<div class="image_layer_two">
+						<ul>
+							<li>
+								<img src=${static.url('images/faculty/faculty_image02.png')} />
+								<div class="image_over_text_one">
+									<p>Explore the</p>
+									<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform</p>
+									<p>by taking our</p>
+									<p><a class="links2" href="/courses/course-v1:IIMBx+IIMBDemox+Self-paced/about" target="_blank">demo course</a></p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/faculty/faculty_image02.png')} />
+								<div class="image_over_text_two">
+									<p>Identify the courses</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/faculty/faculty_image02.png')} />
+								<div class="image_over_text_two">
+									<p>Contact ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} team</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
-</section>
-
+</div>
 </body>
 </html>

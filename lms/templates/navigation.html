@@ -5,6 +5,10 @@
 <%!
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
+#Release: Eucalyptus.3 for IIMB
+#Description: Explorer Courses changed to Courses and Search option added for IIMB
+#Author: Nitin Ayer
+#Date: 07/03/2017
 from django.conf import settings
 from context_processors import doc_url
 from lms.djangoapps.ccx.overrides import get_current_ccx
@@ -51,10 +55,7 @@ site_status_msg = get_site_status_msg(course_id)
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <!--<img src="${static.url(branding_api.get_logo_url())}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>-->
-	    <!--IITBombayX-2016 header logo URL changed to get image from Theme folder-->
-	    <!--IITBombayX: Eucalyptus change: Logo URL path changed for comprehensive theming-->
-            <img src="${static.url('images/headerlogo.png')}" alt="${platform_name()}"/>
+            <img src="${static.url(branding_api.get_logo_url())}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -133,72 +134,69 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-	      <li class="nav-global-01">
 <!--
-#Release: Eucalyptus.3 for IIMB
-#Description: ABOUT page marketing URL map changed for IIMB 
-#Author: Nitin Ayer
-#Date: 08/02/2017-->
+Release: Eucalyptus.3 for IIMB
+Description: ABOUT page marketing URL map changed and Explorer Courses changed to Courses
+Author: Nitin Ayer
+Date: 07/03/2017-->
+	      <li class="nav-global-01">
                 <a class="cta cta-register" href="${marketing_link('ABOUT')}">${_("About")}</a>
               </li>
-<!--
-#Release: Eucalyptus.3 for IIMB
-#Description: HOW IT WORKS page URL chnaged to PROGRAMMES page for IIMB 
-#Author: Nitin Ayer
-#Date: 07/02/2017-->
 	      <li class="nav-global-02">
                 <a class="cta cta-register" href="${marketing_link('PROGRAMMES_PAGE')}">${_("Programmes")}</a>
               </li>
               <li class="nav-global-03">
-                <!--IITBombayX: Explore Courses changed to Courses-->
                 <!--<a class="btn" href="/courses">${_("Explore Courses")}</a>-->
                 <a class="btn" href="/courses">${_("Courses")}</a>
               </li>
-
-	      <li class="nav-global-04">
-              	<div class="title">
-			<div class="course-search">
-				<form method="get" action="/courses">
-					<input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-					<button class="search-button" type="submit">
-						<i class="icon fa fa-search" aria-hidden="true"></i>
-					</button>
-				</form>
-			</div>
-		</div>
-              </li>
-            %endif
-            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <li class="item nav-global-04">
-                <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-              </li>
-            % else:
-<!-- Bharat MOOCs 8th Sept 2014 -->
-<!-- Bharat MOOCs 20th Oct 2014 changed href  to all_courses -->
-<!--IITBombayX-2016 href URL changed to Marketing URL for How it works, Courses and Partners pages.-->
-<!--IITBombayX: Navigation URL commented as Elastic search is enabled-->
-	
-              <li class="item nav-global-05">
-                <a class="btn-neutral" href="/register${login_query()}">${_("Register Now")}</a>
-              </li>
-
-	      <!--IITBombayX: Language code commented for IIMB-->
-	      <%doc><li class="nav-global-04">
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: Language option commented for IIMB
+Author: Nitin Ayer
+Date: 07/03/2017-->
+	      <%doc><li class="nav-global-06">
 		<a href="#change_language" rel="leanModal" class="cta cta-register">${_("Language")}</a>
 	     </li></%doc>
             % endif
           % endif
         </%block>
       </ol>
-
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: 
+1. Added second logo of IIMB
+2. Course Search and Register Now option added with Login option
+3. Login button text changed from "Sign in" to "Login"
+Author: Nitin Ayer
+Date: 07/03/2017-->
+	<h1 class="platform_logo">
+		<a href="${marketing_link('ROOT')}">
+			<img src=${static.url('images/headerlogo.png')} alt="Home Page" />
+		</a>
+	</h1>
       <ol class="right nav-courseware list-inline">
+	<li class="nav-global-04">
+		<div class="title">
+			<div class="course-search">
+				<form method="get" action="/courses">
+					<input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+					<button class="search-button" type="submit">
+					<i class="icon fa fa-search" aria-hidden="true"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+	</li>
+	<li class="item nav-global-05">
+		<a class="btn-neutral" href="/register${login_query()}">${_("Register Now")}</a>
+	</li>
         <%block name="navigation_sign_in">
           <li class="item nav-courseware-01">
             % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-                <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Log in")}</a>
+                <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
               % else:
-                <a class="btn btn-login" href="/login${login_query()}">${_("Log in")}</a>
+                <a class="btn btn-login" href="/login${login_query()}">${_("Login")}</a>
               % endif
             % endif
           </li>
@@ -236,7 +234,11 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
 </header>
 
-<!--IITBombayX: Language code commented for IIMB-->
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: Language code commented for IIMB
+Author: Nitin Ayer
+Date: 07/03/2017-->
 <!--Bab Bharat MOOCs-->
 <!--
 <script type="text/javascript">

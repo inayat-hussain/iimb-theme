@@ -1,0 +1,145 @@
+<%inherit file="../main.html" />
+<%namespace name='static' file='../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: language setting commented as it is not required
+Author: Nitin Ayer
+Date: 12/03/2017-->
+<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
+
+<%block name="pagetitle">${_("Corporate Partnership")}</%block>
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: bodyclass block added to write CSS in SCSS file and SCSS for this page is in _corporate_details.scss file in themes directory
+Author: Nitin Ayer
+Date: 12/03/2017-->
+<%block name="bodyclass">corporate_details</%block>
+
+<html>
+<head>
+</head>
+<body>
+<div class="outer_container">
+	<div class="main_content">
+
+		<div class="banner">
+			<img class="main_banner" src=${static.url('images/corporate/corporate.png')}>
+		</div>
+
+		<div class="tagline">
+			<h2>Corporate Partnership</h2>
+		</div>
+
+		<div class="content">
+
+			<div class="left_content">
+				<div class="sidebar">
+					<ul class="sidemenu">
+						<li><a class="links_sidebar" href="${marketing_link('CORPORATE_OVERVIEW')}">Overview</a></li>
+						<li><a class="links-active" href="${marketing_link('CORPORATE_DETAILS')}">Programme at a glance</a></li>
+						<li><a class="links_sidebar" href="${marketing_link('CORPORATE_FAQ')}">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="right_content">
+				<div class="right_content_text">
+					<h2 class="header_text_first">Specialized Management Courses in a wide range of disciplines</h2>
+					<p class="answer">This is an opportunity for B-schools to use advanced level management courses offered by ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} in their MBA equivalent programme.</p>
+					<div class="text_layer">
+						<ul>
+							<li>
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Professional Development Programmes are designed to be conducted completely online typically over a 6-week period. By spending 4-5 hours per week, participants can master the content online, participate in forums and complete the assessments in a self-paced manner.</p>
+							</li>
+							<li>
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} SPOCs follow blended learning pedagogy to facilitate multi-modal learning through faculty videos, industry insights, expert interviews, multimedia cases, online quizzes, readings as well as interaction with faculty members and peers in the online discussion forum. In some cases, this digital learning experience would be supplemented with a live virtual session with IIMB faculty to bring in organization-specific experiential learning.</p>
+							</li>
+							<li>
+								<p>The ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform offers working professionals many advantages through a customized delivery approach. Learning is focused not only on the organization but also the individual learner. The programmes offer contextual learning, access to learner analytics as well as closed cohorts with private discussion forum.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="image_layer">
+						<ul>
+							<li>
+								<img src=${static.url('images/corporate/corporate_image05.png')} />
+								<div class="image_text">
+									<p class="image_text_data">
+									<span class="text_data_one">1</span>
+									<span class="text_data_two"><br>or more</span>
+									</p>
+									<h2>Courses</h2>
+									<p class="image_text_text">Partner schools must<br />select 6 out of 8 courses<br/>&nbsp;</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/corporate/corporate_image05.png')} />
+								<div class="image_text">
+									<p class="image_text_number">6-8</p>
+									<h2>Weeks</h2>
+									<p class="image_text_text">Individual course duration<br />ranges from 6-8 weeks<br/>&nbsp;</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/corporate/corporate_image05.png')} />
+								<div class="image_text">
+									<p class="image_text_number">02</p>
+									<h2>Months Programme</h2>
+									<p class="image_text_text">Single course can be<br />completed within<br />2 months</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/corporate/corporate_image05.png')} />
+								<div class="image_text">
+									<p class="image_text_number">50</p>
+									<h2>Participants</h2>
+									<p class="image_text_text">Minimum cohort size<br/>&nbsp;<br/>&nbsp;</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="testimonial">
+						<p class="testimonial_title">Innovation and IT Management</p>
+						<p class="testimonial_quote">“Course Delivery and content is really worth. The best thing about Case studies is that these discussions at IIMB are shared. Guest speakers from Industry on the case interviews specially on crowdsourcing are very interesting and helpful. Latest technologies - Big Data, Cloud and SDN are also explained well.”</p>
+						<!--<p class="testimonial_signature">signature</p>-->
+					</div>
+
+					<div class="tagline_inner">
+						<h2>Get Started</h2>
+					</div>
+
+					<div class="image_layer_two">
+						<ul>
+							<li>
+								<img src=${static.url('images/corporate/corporate_image03.png')} />
+								<div class="image_over_text_one">
+									<p>Explore the</p>
+									<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform</p>
+									<p>by taking our</p>
+									<p><a class="links2" href="/courses/course-v1:IIMBx+IIMBDemox+Self-paced/about" target="_blank">demo course</a></p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/corporate/corporate_image03.png')} />
+								<div class="image_over_text_two">
+									<p>Identify the courses</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/corporate/corporate_image03.png')} />
+								<div class="image_over_text_two">
+									<p>Contact ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} team</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+//Release: Eucalyptus.3 for IIMB
+//Description: This file contains CSS related to Course About page.
+//Author: Nitin Ayer
+//Date: 09/03/2017
+
+.courses_about_page {
+//CSS for header
+  .header-global nav {
+   max-width: 1200px;
+   width: 1200px;
+   padding: 10px 0px 0px 0px;
+  }
+
+  .header-global{
+   position: fixed;
+   top: 0px;
+
+   .nav-global {
+    margin-top: 18px;
+
+    li {
+   vertical-align: top;
+   }
+  }
+
+    h1.logo a img {
+    height: 70px !important;
+  }
+ }
+
+//CSS for content-wrapper div
+ .content-wrapper{
+  margin-top: 76px;
+  background: $white;
+  padding-bottom: 40px;
+ }
+
+ .course-info {
+  max-width: 1170px;
+  margin: auto;
+ }
+
+ .intro-inner-wrapper{
+  box-shadow: none !important;
+  background: $white !important;
+  border: none !important;
+  border-bottom: 1px solid $border-color-l3 !important;
+ }
+
+ .course-info .container{
+   padding: 0px 0px 0px 20px;
+   background: $white;
+   border: 1px solid $border-color-l3;
+   border-top: 0px;
+ }
+
+ .course-sidebar .course-summary{
+   border-left: 1px solid $border-color-l3;
+   border-bottom: 1px solid $border-color-l3;
+   border-right: 0px;
+ }
+
+ .course-info header.course-profile {
+   background: none;
+   box-shadow: none;
+   margin: 0px;
+   padding-top: 20px;
+   height: auto;
+   padding-bottom: 40px;
+   border-bottom: 1px solid $border-color-l3
+ }
+
+ .container nav{
+  border-bottom: none !important;
+  margin: 30px 0px 15px 0px !important;
+ }
+
+ .active {
+  font-size: 22px !important;
+  text-transform: none !important;
+  font-weight: bold !important;
+  padding: 0px !important;
+  border-bottom: none !important;
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group {
+  border-bottom: none;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 0px;
+ }
+
+ .inner-wrapper, .inner-wrapper section, h1, h2, h3, p{
+  font-family: $font_family1;
+ }
+
+ .inner-wrapper h2{
+  font-weight: bold;
+  text-transform: none;
+  font-size: 1.25em;
+ }
+
+ .teacher-image{
+  margin:0px 20px 0px 0px !important;
+  padding: 0px !important;
+  border: 0px !important;
+  box-shadow: (3px 2px 5px rgba(0, 0, 0, .5));
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register{
+  background: $button-color none repeat scroll 0px 0px;
+  border: 0px none $white;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: none;
+  line-height: normal;
+
+  &:hover:not(:disabled){
+   background-image: none;
+   background-color: $link-color;
+  }
+
+  &:focus:not(:disabled), &:active:not(:disabled) {
+   box-shadow: none !important;
+  }
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong{
+  background: $button-color none repeat scroll 0px 0px;
+  border: 0px none $white;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: none;
+  line-height: normal;
+
+  &:hover:not(:disabled){
+   background-image: none;
+   background-color: $link-color;
+   box-shadow: none !important;
+  }
+
+  &:focus:not(:disabled), &:active:not(:disabled){
+   box-shadow: none !important;
+  }
+ }
+
+ .course-info .course-sidebar > .coursetalk-read-reviews{
+   margin-top: 40px;
+ }
+}

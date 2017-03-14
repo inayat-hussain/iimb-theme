@@ -1,0 +1,443 @@
+//Release: Eucalyptus.3 for IIMB
+//Description: This file contains CSS related to About page.
+//Author: Nitin Ayer
+//Date: 13/03/2017
+
+.about {
+//CSS for header
+  .header-global nav {
+   max-width: 1200px;
+   width: 1200px;
+   padding: 10px 0px 0px 0px;
+  }
+
+  .header-global{
+   position: fixed;
+   top: 0px;
+
+   .nav-global {
+    margin-top: 18px;
+
+    li {
+   vertical-align: top;
+   }
+  }
+
+    h1.logo a img {
+    height: 70px;
+  }
+ }
+
+//CSS for content-wrapper div
+ .content-wrapper{
+  margin-top: 76px;
+  background: $white;
+  padding-bottom: 40px;
+ }
+
+//CSS added for header option highlight
+ .nav-global-01 a {
+  color: $link-color !important;
+ }
+
+ .outer_container{
+  width: auto;
+  margin: auto;
+ }
+
+ .main_content{
+  width: 1200px;
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
+  background: $white;
+ }
+
+ .banner{
+  border-bottom: 1px solid $border-color-l3;
+ }
+
+ .main_banner{
+  display: block;
+ }
+
+ .tagline{
+  padding: 0px;
+  margin: auto;
+  display: block;
+
+  h2 {
+   color: $link-color;
+   font-family: $font_family1;
+   font-size: 56px;
+   font-weight: 300;
+   font-style:italic;
+   letter-spacing: 0em;
+   text-transform: none;
+   text-align: center;
+   display: block;
+   margin: 0px;
+   padding: 20px 0px 20px 0px;
+   line-height:normal;
+  }
+ }
+
+ .container_one {
+  width: 100%;
+  height: 380px;
+  margin: 0px 0px 80px 0px;
+  background: $table-coloumn_bg;
+  display: block;
+  box-sizing:border-box;
+  min-width: -moz-fit-content;
+ }
+
+ .container_two{
+  background: $white;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  height: inherit;
+  display: inline-block;
+  width: 60%;
+  margin-left: -10%;
+  max-width: 61%;
+  float: left;
+  position:absolute;
+ }
+
+ .container_three {
+  background:transparentize($link-color, .7);
+  height: 100%;
+  max-height:100%;
+  display: inline-block;
+  width: 100%;
+  margin-left: -0.5%;
+  max-width: 100%;
+  float: left;
+ }
+
+ .container_text_outer{
+  width:100%;
+  max-width:100%;
+  height: 100%;
+  max-height:100%;
+  margin: auto;
+  position: relative;
+  padding: 0;
+ }
+
+ .container_text {
+  width: 1200px;
+  max-width: 1200px;
+  height: 100%;
+  max-height:100%;
+  line-height: normal;
+  margin: auto;
+  padding: 20px 0px 20px 0px;
+  display:block;
+  box-sizing:border-box;
+ }
+
+ .about_text{
+  width: 48%;
+  max-width:48%;
+  max-height:100%;
+  height:100%;
+  float:left;
+  margin:auto;
+  padding: 0px 100px 0px 0px;
+  display:inline-block;
+  box-sizing:border-box;
+  line-height:normal;
+
+  h2{
+  margin: 0;
+  color: $link-color;
+  font-family: $font_family1;
+  padding: 0px 0px 15px 0px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+  line-height:normal;
+   }
+
+  p {
+  margin: 0;
+  font-size: 14px;
+  padding: 0px 0px 20px 0px;
+  line-height: normal;
+  letter-spacing: 0;
+  color: $black_font_color;
+  }
+ }
+
+ .about_video{
+  width: 40%;
+  margin:auto;
+  padding: 0px 0px 0px 100px;
+  display:inline-block;
+ }
+
+ .main_content > ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  box-sizing: border-box;
+  display: inline-block;
+
+  li{
+  display:inline-block;
+  float:left;
+  width:400px;
+
+  div{
+   display: inline-block;
+   float: left;
+
+   img{
+    width:140px;
+    display:block;
+    }
+   }
+  }
+ }
+
+ .image{
+  width: 140px;
+  max-width:140px;
+  padding: 25px 0px 0px 0px;	
+ 
+  p {
+   position:relative;
+   top: -110px;
+   left: -10px;
+   padding:0px;
+   margin:0px;
+   font-size: 96px;
+   font-weight:400;
+   font-style:italic;
+   text-align:center;
+   color: $white;
+   line-height:100%;
+   letter-spacing:0;
+  }
+ }
+
+ .text{
+  width: 260px;
+  max-width: 260px;
+
+  p {
+  margin: 0;
+  padding: 0px;
+  font-size: 13px;
+  line-height:normal;
+  letter-spacing:normal;
+  padding: 0px 10px 0px 10px;
+  color: $black_font_color;
+  }
+ }
+
+ .text .header_text{
+  font-size : 15px;
+  margin: 0;
+  padding: 10px 10px 0px 10px;
+  color: $link-color;
+ }
+
+ .container_four {
+  width: 100%;
+  height: 380px;
+  margin: 0px 0px 80px 0px;
+  background:$link-color;
+  display: block;
+  box-sizing:border-box;
+  min-width: -moz-fit-content;
+ }
+
+ .container_five{
+  background: $white;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  height: inherit;
+  display: inline-block;
+  width: 60%;
+  margin-left: -10%;
+  max-width: 61%;
+  float: left;
+  position:absolute;
+ }
+
+ .container_six {
+  background:$table-coloumn_bg;
+  height: 100%;
+  max-height:100%;
+  display: inline-block;
+  width: 100%;
+  margin-left: -0.5%;
+  max-width: 100%;
+  float: left;
+ }
+
+ .container_text_two {
+  width: 1200px;
+  max-width: 1200px;
+  height: 100%;
+  max-height:100%;
+  line-height: normal;
+  margin: auto;
+  padding: 80px 0px 40px 0px;
+  display:block;
+  box-sizing:border-box;
+ }
+
+ .about_redefine{
+  width: 48%;
+  max-width:48%;
+  max-height:100%;
+  height:100%;
+  float:left;
+  margin:auto;
+  padding: 0px 100px 0px 0px;
+  display:inline-block;
+  box-sizing:border-box;
+  line-height:normal;
+ 
+  h2{
+  margin: 0;
+  color: $white;
+  font-family: $font_family1;
+  padding: 0px 0px 15px 0px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+  line-height:normal;
+  }
+
+  p {
+  margin: 0;
+  color:$white;
+  font-size: 14px;
+  padding: 0px 0px 20px 0px;
+  line-height: normal;
+  letter-spacing: 0;
+  }
+ }
+
+ .about_gif_container{
+  width: 44%;
+  margin: auto;
+  padding: 40px 0px 0px 90px;
+  display: inline-block;
+  height: 210px;
+  max-height: 210px;
+
+  .gif_video {
+   display: inline-block;
+   float: left;
+   padding: 0px 20px 0px 0px;
+   height:100%;
+
+  .gif_bg {
+   width:300px;
+   display:block;
+   }
+  }
+ }
+
+ .gif_image{
+  width: 272px;
+  position: relative;
+  top: -195px;
+  left: 15px;
+  display: block;
+ }
+
+ .bullets{
+  display: inline-block;
+  float: right;
+  margin: 50px 0px 50px 0px;
+ 
+  ul{
+   padding: 0;
+   margin: 0;
+   font-size: 14px;
+   color: $white;
+   font-weight: 600;
+   line-height:normal;
+   letter-spacing:0;
+   list-style-image:url('../images/gray_dot.png');
+  }
+ }
+
+ .image_container {
+  width: 1200px;
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  padding: 0px;
+ }
+
+ .image_layer{
+  margin:auto;
+  padding:0px 30px 0px 30px;
+  height: 300px;
+  display:block;
+
+  ul{
+   margin: 0px;
+   padding: 0px;
+   list-style: none;
+   height: inherit;
+
+   li{
+   display: inline-block;
+   height:100%;
+   overflow:hidden;
+
+   &:first-child{
+    float: left;
+   }
+
+   &:last-child{
+    float: right;
+  }
+
+  img{
+   width: 300px;
+   display: block;
+   }
+  }
+ }
+}
+
+ .text_one{
+  font-size: 82px;
+  font-weight: 800;
+  color: $link-color;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  position:relative;
+  top:-200px;
+  line-height:100%;
+ }
+
+ .text_two{
+  font-size: 24px;
+  font-weight: 800;
+  color: $white;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  position:relative;
+  top:-190px;
+  line-height:125%;
+  text-transform:uppercase;
+ }
+}

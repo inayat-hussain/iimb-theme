@@ -1,78 +1,174 @@
 <%inherit file="../main.html" />
-<!--Bharat Moocs Added on 23 Sep for language option -->
-<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
 <%namespace name='static' file='../static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
-<!--IITBombayX: language setting commented as it is not required and microsite configuration removed-->
-<!--IITBombayX: main.html and static_content.html file path changed-->
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: language setting commented as it is not required
+Author: Nitin Ayer
+Date: 12/03/2017-->
+<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
 
 <%block name="pagetitle">${_("Academic Partnership")}</%block>
-<%block name="bodyclass">about_page_en</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
-<!--IITBombayX-2016, CSS for this page is written in _about_page.scss inside theme folder by Nitin Ayer-->
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: bodyclass block added to write CSS in SCSS file and SCSS for this page is in _academic_details.scss file in themes directory
+Author: Nitin Ayer
+Date: 12/03/2017-->
+<%block name="bodyclass">academic_details</%block>
 
 <html>
 <head>
 </head>
 <body>
-
-<section class="container about">
+<div class="outer_container">
 	<div class="main_content">
-		<div class="banner"><img src=${static.url('images/academicpartnership.png')} width="1200px"></div>
-    			<div class="wrapper">
-       				<div class="wrapper-container">
-       					<div class="wrapper-inner">
-						<div class="tagline"><h2 class="tagline_text">Academic Partnership</h2></div>
-        					<div class="inner-class">
-                					<div class="inner-content">
-								<table border="0" width="1200px;" height="600px;" cellpadding="0" cellspacing="0">
 
-								<tr>
+		<div class="banner">
+			<img class="main_banner" src=${static.url('images/academic/academic.png')}>
+		</div>
 
-								<td class ="table_column01" width="217px" valign="top">
-								<div class="sidebar">
+		<div class="tagline">
+			<h2>Academic Partnership</h2>
+		</div>
 
-								<ul class="sidemenu">
-								<li><a class="links" href="${marketing_link('ACADEMIC_OVERVIEW')}">Overview</a></li>
-							          <!--IITBombayX: Blog and News URL changed for IIMB-->
-							          <!--IITBombayX: Research & Pedagogy and FAQ Links removed for IIMB-->
-								<!--<li><a class="links" href="https://iimbxonline.wordpress.com/" target="_blank">BLOG</a></li>
-								<li><a class="links" href="http://www.iimb.ernet.in/node/7383" target="_blank">NEWS</a></li>-->
-								<li><a class="links-active" href="${marketing_link('ACADEMIC_DETAILS')}">Details</a></li>
-								<li><a class="links" href="${marketing_link('ACADEMIC_FAQ')}">FAQ</a></li>
-								</ul>
+		<div class="content">
+			<div class="left_content">
+				<div class="sidebar">
+					<ul class="sidemenu">
+						<li><a class="links_sidebar" href="${marketing_link('ACADEMIC_OVERVIEW')}">Overview</a></li>
+						<li><a class="links-active" href="${marketing_link('ACADEMIC_DETAILS')}">Programme at a glance</a></li>
+						<li><a class="links_sidebar" href="${marketing_link('ACADEMIC_FAQ')}">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
 
+			<div class="right_content">
+				<div class="right_content_text">
+					<h2 class="header_text_first">Online Certificate Programme in Fundamentals of Business Management</h2>
+					<p class="answer">With this programme we provide students from partnering institutes an opportunity to master Fundamentals of Business Management certified by ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}. A perfect combination of technical knowledge and managerial skills will certainly help students excel in their field of choice.</p>
+					<div class="image_layer">
+						<ul>
+							<li>
+								<img src=${static.url('images/academic/academic_image06.png')} />
+								<div class="image_text">
+									<p class="image_text_number">06</p>
+									<h2>Courses</h2>
+									<p class="image_text_text">Partner schools must<br />select 6 out of 8 courses</p>
 								</div>
-								</td>
-
-								<td class ="table_column02" width="743px">
-								<section class="inner-section">
-
-								<!--<h2 class="field-page-tagline view-mode-full"><strong>Knowledge Anytime, Anywhere.</strong></h2>-->
-
-								<div class="field-page-body view-mode-full">
-                                                                <p><strong>Online certificate program in Fundamentals of Business Management</strong><p>
-								<p>With this programme we provide students from partnering institutes an opportunity to master Fundamentals of Business Management certified by ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}. A perfect combination of technical knowledge and managerial skills will certainly help students excel in their field of choice.</p><br />
-
-								<p>Download the brochure to know more.</p><br />
-
-								<p><strong>B-school Partnership Programme</strong></p>
-
-								<p>This is an opportunity for B-schools to use advanced level management courses offered by ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} in their MBA equivalent programme.</p><br />
-
-								<p>Download the brochure to know more.</p>
+							</li>
+							<li>
+								<img src=${static.url('images/academic/academic_image06.png')} />
+								<div class="image_text">
+									<p class="image_text_number">6-8</p>
+									<h2>Weeks</h2>
+									<p class="image_text_text">Individual course duration<br />ranges from 6-8 weeks</p>
 								</div>
-								</section>
-								</td>
+							</li>
+							<li>
+								<img src=${static.url('images/academic/academic_image06.png')} />
+								<div class="image_text">
+									<p class="image_text_number">01</p>
+									<h2>Year Programme</h2>
+									<p class="image_text_text">The entire programme can be<br />completed within a year</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/academic/academic_image06.png')} />
+								<div class="image_text">
+									<p class="image_text_number">50</p>
+									<h2>Participants</h2>
+									<p class="image_text_text">Minimum cohort size<br/>&nbsp;</p>
+								</div>
+							</li>
+						</ul>
+					</div>
 
-								</tr>
-								</table>
-							</div>
-						</div>
+					<div class="brochure_download"><a href=${static.url('Fundamentals_of_Business_Management_Brochure.pdf')} target="_blank">Download the brochure to learn more</a></div>
+
+					<h2 class="header_text">Specialized Management Courses in a wide range of disciplines</h2>
+					<p class="answer">This is an opportunity for B-schools to use advanced level management courses offered by ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} in their MBA equivalent programme.</p>
+
+					<div class="image_layer">
+						<ul>
+							<li>
+								<img src=${static.url('images/academic/academic_image06.png')} />
+								<div class="image_text">
+									<p class="image_text_data">
+									<span class="text_data_one">1</span>
+									<span class="text_data_two"><br>or more</span>
+									</p>
+									<h2>Courses</h2>
+									<p class="image_text_text">Partner schools must<br />select 6 out of 8 courses<br/>&nbsp;</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/academic/academic_image06.png')} />
+								<div class="image_text">
+									<p class="image_text_number">6-8</p>
+									<h2>Weeks</h2>
+									<p class="image_text_text">Individual course duration<br />ranges from 6-8 weeks<br/>&nbsp;</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/academic/academic_image06.png')} />
+								<div class="image_text">
+									<p class="image_text_number">02</p>
+									<h2>Months Programme</h2>
+									<p class="image_text_text">Single course can be<br />completed within<br />2 months</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/academic/academic_image06.png')} />
+								<div class="image_text">
+									<p class="image_text_number">50</p>
+									<h2>Participants</h2>
+									<p class="image_text_text">Minimum cohort size<br/>&nbsp;<br/>&nbsp;</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="brochure_download"><a href=${static.url('Specialized_Management_Courses_Brochure.pdf')} target="_blank">Download the brochure to learn more</a></div>
+
+					<div class="testimonial">
+						<p class="testimonial_title">Do Your Venture (Entrepreneurship)</p>
+						<p class="testimonial_quote">“Absolutely happy that I had enrolled in the course. The course has provided me a completely fresh perspective on entrepreneurship; and gave a methodical approach to create my own venture. Professor Suresh and all the mentors in the course gave a very crisp, precise and clear understanding about what exactly is entrepreneurship and how to go about it. Very thrilled from the outcomes of the course.”</p>
+						<!--<p class="testimonial_signature">signature</p>-->
+					</div>
+
+					<div class="tagline_inner">
+						<h2>Get Started</h2>
+					</div>
+
+					<div class="image_layer_two">
+						<ul>
+							<li>
+								<img src=${static.url('images/academic/academic_image04.png')} />
+								<div class="image_over_text_one">
+									<p>Explore the</p>
+									<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform</p>
+									<p>by taking our</p>
+									<p><a class="links2" href="/courses/course-v1:IIMBx+IIMBDemox+Self-paced/about" target="_blank">demo course</a></p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/academic/academic_image04.png')} />
+								<div class="image_over_text_two">
+									<p>Identify the courses</p>
+								</div>
+							</li>
+							<li>
+								<img src=${static.url('images/academic/academic_image04.png')} />
+								<div class="image_over_text_two">
+									<p>Contact ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} team</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
-</section>
-
+</div>
 </body>
 </html>

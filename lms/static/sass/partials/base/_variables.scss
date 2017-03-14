@@ -1,52 +1,58 @@
-@import 'lms/static/sass/partials/base/variables';
 /****************************************************************************************************
 *   Stanford Theming File
 *
 *   Contains all the theme color definitions for the Stanford Open Source MOOC Project
 *
 ****************************************************************************************************/
+//Release: Eucalyptus.3 for IIMB
+//Description: base variable SCSS file imported from edx-platform for comprehensive theming
+//Author: Nitin Ayer
+//Date: 06/03/2017
+@import 'lms/static/sass/partials/base/variables';
 
-//IITBombayX - For making theme name dynamic 06th Jan 2016
+//Release: Eucalyptus.3 for IIMB
+//Description: For making theme name dynamic 06th Jan 2016
 // A new variable called customthemevariable is being created with a dummy name cypress-theme. This will be replaced later at the time of 
 // running paver commands.
+//Author: Nitin Ayer
+//Date: 06/01/2016
 $customthemevariable: iimb-theme !global;
-
-//IITBombayX: Font import is commented for IIMB, Author: Nitin Ayer, Date: 25/01/2017
-//IITBombayX-2016, Importing EKmukta hindi font, added by Nitin Ayer.
-//@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:400,200,300,500,600,700,800);
 
 //-----------------
 //  Color variables (from Stanford palette unless noted)
 //-----------------
 
-//IITBombayX - Original main-color and link color
+//Release: Eucalyptus.3 for IIMB
+//Description: main-color and link-color changed for IIMB
+//Author: Nitin Ayer
+//Date: 06/03/2017
 //Main Color Variables
 //$main-color: #f7691f;
 //$dark-color: #ea281f; //Link Color
-
-//IITBombayX - main-color and link color change by Nitin Ayer
-//$main-color: #EC5A1A;
-//$dark-color: #F7691F; //Link Color
-
-//IITBombayX: main-color and link-color changed for IIMB by Nitin Ayer-->
 $main-color: #9E0B0F;
 $dark-color: #B11117; //Link Color
 
 $light-color: #f4e00c; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
+//Release: Eucalyptus.3 for IIMB
+//Description: main-bg color changed
+//Author: Nitin Ayer
+//Date: 06/03/2017
 //Main BG Color Variables
-//$main-bg: #822537; //IITBombayX- Original main-bg color
-//$main-bg: #AD4A16;//IITBombayX- main-bg color chnage by Nitin Ayer
-//IITBombayX:main-bg color changed for IIMB by Nitin Ayer
-$main-bg: #8B0304;//IITBombayX- main-bg color chnage by Nitin Ayer
+//$main-bg: #822537;
+$main-bg: #8B0304;
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
 $main-bg-25: lighten($main-bg, 25%); 
 
+//Release: Eucalyptus.3 for IIMB
+//Description: secondary color changed
+//Author: Nitin Ayer
+//Date: 06/03/2017
 //Secondary Color Variables
 
-//$secondary: #b5a4b7; //IITBombayX-Original secondary color
-$secondary: #b9b9b9;//IITBombayX - secondary color change by Nitin Ayer
+//$secondary: #b5a4b7;
+$secondary: #b9b9b9;//
 $secondary-50: lighten($secondary, 9%);
 $secondary-25: lighten($secondary, 20%); //Important Heading BG Color 
 
@@ -56,19 +62,36 @@ $gray-75: lighten($gray, 18.25%); //Lighter Text Color
 
 $gray-3: #e9e9e9; //Block/Course BG Color
 $gray-2: #f2f2f2;
-//$gray-1: #fbfbfb; //Main BG Color //IITBombayX-2015, Original color, commented by Nitin Ayer
-$gray-1: #f7f7f7; //Main BG Color // IITBombayX-2015, background color changed by Nitin Ayer
-//$white: $gray-1; //IITBombayX-2015, Original White color defined in theme, commented by Nitn Ayer.
-$white: #FFFFFF; //IITBombayX-2015, White color color changed by Nitin Ayer
-
-$gray-4: #555555; //IITBombayX 2016- New color variable define for font colour, added by Nitin Ayer
-
+//Release: Eucalyptus.3 for IIMB
+//Description: background and white color changed
+//Author: Nitin Ayer
+//Date: 06/03/2017
+//$gray-1: #fbfbfb; //Main BG Color
+$gray-1: #f7f7f7; //Main BG Color
+//$white: $gray-1; //Main BG Color 
+$white: #FFFFFF;
 $black: #2e2e2e;
-//$black-80: #585858; // IITBombayX-18/12/2015, original header color commented by Nitin Ayer
-$black-80: #3D3E3F; //IITBombayX-18/12/2015, Header color changed by Nitin Ayer
-$course_block-bg: #e9e9e9; // IITBombayX-2016, new color variable define for course backgound color on index page.
+//Release: Eucalyptus.3 for IIMB
+//Description: Header text color black-80 changed
+//Author: Nitin Ayer
+//Date: 18/12/2015
+//$black-80: #585858;
+$black-80: #3D3E3F;
 
-$table-coloumn_bg: #F3F0E6; //IITBombayX-2016, new color variable define for background color.
+//Release: Eucalyptus.3 for IIMB
+//Description: New color variable defined
+//1. gray-4: New color variable define for font colour
+//2. course_block-bg: New color variable for course backgound color on index page.
+//3. table-coloumn_bg: New color variable define for background color
+//4. search-bar-gray: New color variable for course search background
+//5. black_font_color: New color variable for font color
+//Author: Nitin Ayer
+//Date: 06/03/2017
+$gray-4: #555555;
+$course_block-bg: #e9e9e9;
+$table-coloumn_bg: #B7BFC6;
+$search-bar-gray: #CCCCCC;
+$black_font_color: #000000;
 //-----------------
 //  Font Assignment
 //-----------------
@@ -81,8 +104,6 @@ $theme-serif-font: 'Crimson Text';
 $serif: $theme-serif-font, $serif;
 
 $font_family1: $sans-serif;
-$font_family2: 'Ek Mukta', sans-serif;
-
 
 //-----------------
 //  Theme Element Assignments
@@ -93,6 +114,10 @@ $container-bg: $gray-1;
 $login-register-bg: $gray-1;
 $content-wrapper-bg: $gray-1;
 $header-image: none;
+//Release: Eucalyptus.3 for IIMB
+//Description: Header background changed
+//Author: Nitin Ayer
+//Date: 06/03/2017
 //$header-bg: transparentize(lighten($secondary-25, 18.5%), .25);
 $header-bg: transparentize($secondary-25, 0.05);
 $courseware-header-image: none;
@@ -115,7 +140,10 @@ $very-light-text: $gray-1;
 
 $link-color: $dark-color;
 $link-color-d1: $dark-color;
-//IITBombayX: Eucalyptus change: link-hover color chnaged by Nitin Ayer
+//Release: Eucalyptus.3 for IIMB
+//Description: link hover color changed
+//Author: Nitin Ayer
+//Date: 06/03/2017
 //$link-hover: $light-color;
 $link-hover: $link-color;
 $site-status-color: $bg-color;
@@ -219,31 +247,23 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-//$homepage-bg-image: url('../themes/iitbxcypress-theme/images/homebanner.png');
-//$login-banner-image: url('../themes/iitbxcypress-theme/images/bg-banner-account.png');
-//$register-banner-image: url('../themes/iitbxcypress-theme/images/bg-banner-account.png');
+//Release: Eucalyptus.3 for IIMB
+//Description: Image URL changed changed
+//Author: Nitin Ayer
+//Date: 06/03/2017
 
-//IITBombayX - For making theme name dynamic 06th Jan 2016
-$homepage-bg-image: url('../#{$customthemevariable}/images/homebanner.png');
-$login-banner-image: url('../#{$customthemevariable}/images/bg-banner-account.png');
-$register-banner-image: url('../#{$customthemevariable}/images/bg-banner-account.png');
+$homepage-bg-image: url('../images/homebanner.png');
+$login-banner-image: url('../images/bg-banner-account.png');
+$register-banner-image: url('../images/bg-banner-account.png');
 
-//IITBombayX-2015, Background images variable for static pages, added by Nitin Ayer
-
-//BG images for How it works page
-$how_it_works_image01: url('../#{$customthemevariable}/images/how-it-works/howitworks-banner-real-classes.png');
-$how_it_works_image02: url('../#{$customthemevariable}/images/how-it-works/howitworks-banner-amazing.png');
-$how_it_works_image03: url('../#{$customthemevariable}/images/how-it-works/howitworks-banner-schedule.png');
-$how_it_works_image04: url('../#{$customthemevariable}/images/how-it-works/howitworks-banner-friends.png');
-$how_it_works_image05: url('../#{$customthemevariable}/images/how-it-works/howitworks-footer.png');
-$how_it_works_image06: url('../#{$customthemevariable}/images/how-it-works/how-it-works_hindi.jpg');
-
-//BG image for Courses page
-$courses_image01: url('../#{$customthemevariable}/images/courses.png');
+//Release: Eucalyptus.3 for IIMB
+//Description: Background images variable for static pages
+//Author: Nitin Ayer
+//Date: 06/03/2017
 
 //BG image for FAQ page
-$iitbx_faq_image01: url('../#{$customthemevariable}/images/FAQ/arrow_up.png');
-$iitbx_faq_image02: url('../#{$customthemevariable}/images/FAQ/arrow_down.png');
+$iitbx_faq_image01: url('../images/FAQ/arrow_up.png');
+$iitbx_faq_image02: url('../images/FAQ/arrow_down.png');
 
 //$video-thumb-url: '/static/images/edx.png';
 
@@ -262,68 +282,195 @@ $iitbx_faq_image02: url('../#{$customthemevariable}/images/FAQ/arrow_down.png');
     text-align: right;
 }
 
-//IITBombayX-2016, Link CSS added by Nitin Ayer, previously written in _header.scss file in lms/static/sass/shared folder
+//Release: Eucalyptus.3 for IIMB
+//Description: Link CSS
+//Author: Nitin Ayer
+//Date: 06/03/2017
 
-.links-active:link {
-	color: $button-color;
-	text-decoration: none;
-	font-family: $font_family1;
+.links-active {
+ color: $button-color;
+ text-decoration: none;
+ font-family: $font_family1;
+ outline: 0px;
+
+  &:link {
+   color: $button-color;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+ }
+
+  &:visited {
+   color: $button-color;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+ }
+
+  &:hover {
+   color: $link-color;
+   text-decoration: none !important;
+   border-bottom: 1px dotted $link-color;
+   font-family: $font_family1;
+   outline: 0px;
+ }
+
+  &:active {
+   color: $button-color;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+ }
 }
 
-.links-active:visited {
-	color: $button-color;
-	text-decoration: none;
-	font-family: $font_family1;
+.links {
+ color: $gray-4;
+ text-decoration: none;
+ font-family: $font_family1;
+ outline: 0px;
+
+  &:link {
+   color: $gray-4;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+  } 
+
+  &:visited {
+   color: $gray-4;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+  }
+
+  &:hover {
+   color: $link-color;
+   text-decoration: none !important;
+   border-bottom: 1px dotted $link-color;
+   font-family: $font_family1;
+   outline: 0px;
+  }
+
+  &:active {
+   color: $gray-4;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+ }
 }
 
-.links-active:hover {
-	color: $link-color;
-	text-decoration: none !important;
-	border-bottom: 1px dotted $link-color;
-        font-family: $font_family1;
+.links2 {
+ color: $white;
+ font-family: $font_family1;
+ outline: 0px;
+
+  &:link {
+   color: $white;
+   font-family: $font_family1;
+   text-decoration: underline;
+   outline: 0px;
+  }
+
+  &:visited {
+   color: $white;
+   font-family: $font_family1;
+   text-decoration: underline;
+   outline: 0px;
+  }
+
+  &:hover {
+   color: $white !important;
+   text-decoration: none !important;
+   border-bottom: 1px dotted $white;
+   font-family: $font_family1;
+   outline: 0px;
+  }
+
+  &:active {
+   color: $white;
+   font-family: $font_family1;
+   outline: 0px;
+ }
 }
 
-.links:link {
-	color: $gray-4;
-	text-decoration: none;
-	font-family: $font_family1;
+.links_sidebar {
+ color: $white;
+ text-decoration: none;
+ font-family: $font_family1;
+ outline: 0px;
+
+  &:link {
+   color: $white;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+ }
+
+  &:visited {
+   color: $white;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+ }
+
+  &:hover {
+   color: $link-color;
+   text-decoration: none !important;
+   border-bottom: 1px dotted $link-color;
+   font-family: $font_family1;
+   outline: 0px;
+ }
+
+  &:active {
+   color: $link-color;
+   text-decoration: none !important;
+   border-bottom: 1px dotted $link-color;
+   font-family: $font_family1;
+   outline: 0px;
+ }
 }
 
-.links:visited {
-	color: $gray-4;
-	text-decoration: none;
-	font-family: $font_family1;
+.links-active2 {
+ color: $button-color;
+ text-decoration: none;
+ font-family: $font_family1;
+ outline: 0px;
+
+  &:link {
+   color: $button-color;
+   text-decoration: none;
+   font-family: $font_family1;
+   outline: 0px;
+  }
+
+  &:visited {
+   color: $button-color;
+   text-decoration: none !important;
+   font-family: $font_family1;
+   outline: 0px;
+  }
+
+  &:hover {
+   color: $link-color;
+   text-decoration: none !important;
+   border-bottom: 1px dotted $link-color;
+   font-family: $font_family1;
+   outline: 0px;
+ }
+
+  &:active {
+   color: $link-color;
+   text-decoration: none !important;
+   font-family: $font_family1;
+   outline: 0px;
+ }
 }
 
-.links:hover {
-	color: $link-color;
-	text-decoration: none !important;
-	border-bottom: 1px dotted $link-color;
-	font-family: $font_family1;
-}
-
-.links-active2:link {
-	color: $button-color;
-	text-decoration: none;
-	font-family: $font_family1;
-}
-
-.links-active2:visited {
-	color: $button-color;
-	text-decoration: none !important;
-	font-family: $font_family1;
-}
-
-.links-active2:hover {
-	color: $link-color;
-	text-decoration: none !important;
-	border-bottom: 1px dotted $link-color;
-	font-family: $font_family1;
-}
-
-
-//IITBombayX: CSS for Course search box in header, Author: Nitin Ayer, Date: 25/01/2017
- .header-global .nav-global .title{
+//Release: Eucalyptus.3 for IIMB
+//Description: CSS for Course search box in header
+//Author: Nitin Ayer
+//Date: 06/03/2017
+ .header-global .nav-courseware .title{
   margin: 0px;
   background: none;
   box-shadow: none;
@@ -335,32 +482,40 @@ $iitbx_faq_image02: url('../#{$customthemevariable}/images/FAQ/arrow_down.png');
   transition: all 0.2s linear 0s;
   position: relative;
   min-height: 100%;
-  vertical-align: top;
-  margin-top: -8px;
+  vertical-align: middle;
  }
 
- .header-global .nav-global .title form{
+ .header-global .nav-courseware .title form{
   display: inline-block;
  }
 
- .header-global .nav-global .course-search .search-input{
-  height: 40px;
+ .header-global .nav-courseware .course-search .search-input{
+  background: $search-bar-gray;
+  border: 1px solid $white;
+  height: 30px;
   z-index: 10;
   float: left;
   padding-right: 55px;
   padding-left: 10px;
   border-radius: 5px;
   box-shadow: none;
-  width: 230px;
+  width: 310px;
   color: $black;
+  font-weight: 600;
   font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   font-family:$font_family1;
+
+  &:hover, &:focus, &:active, &:focus:not(:disabled), &:hover:not(:disabled){
+   background: $search-bar-gray;
+   border: 1px solid $white;
+   border-radius: 5px;
+   outline: 0px;
+ }
 }
 
- .header-global .nav-global .course-search .search-button{
-  height: 40px;
+ .header-global .nav-courseware .course-search .search-button{
+  height: 30px;
   border: 2px solid transparent;
   background: transparent;
   z-index: 100;
@@ -371,41 +526,39 @@ $iitbx_faq_image02: url('../#{$customthemevariable}/images/FAQ/arrow_down.png');
   text-shadow: none;
   box-shadow: none;
   padding: 0 14px;
-  font-size: 24px;
   font-weight: 600;
+
+  &:hover, &:focus, &:active, &:focus:not(:disabled), :hover:not(:disabled){
+    background: transparent;
+    outline: 0px;
+ }
 }
 
- .header-global .nav-global .title .course-search .search-button:hover{
-  background: transparent;
+ .header-global .nav-courseware .fa{
+  color: $white;
+  font-size: 18px
  }
 
- .header-global .nav-global .title .course-search .search-button:focus{
-  background: transparent;
- }
+// .header-global .nav-courseware .title .course-search .search-input:focus{
+//  border: 1px solid $gray-1;
+// }
 
- .header-global .nav-global .fa{
-  color: $m-gray;
-  font-size: 22px
- }
-
- .header-global .nav-global .title .course-search .search-input:focus{
-  border: 2px solid $gray-1;
- }
-
-//IITBombaYX-2015, New SCSS files related static pages imported.
-@import '../../index_page'; //IITBombayX-2015, Added by Nitin Ayer, to compile new SCSS file related to index page
-@import '../../how_it_works_en'; //IITBombayX-2015, Added by Nitin Ayer, to compile new SCSS file related to How it works page
-@import '../../courses_en'; //IITBombayX-2015, Added by Nitin Ayer, to compile new SCSS file related to Courses page
-@import '../../partner_page'; //IITBombayX-2015, Added by Nitin Ayer, to compile new SCSS file related to Partners page
-@import '../../courselist_page'; //IITBombayX-2015, Added by Nitin Ayer, to compile new SCSS file related to Courselist page
-@import '../../register_login_page'; //IITBombayX-2015, Added by Nitin Ayer, to compile new SCSS file related to Register and Login page
-@import '../../about_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to About page
-@import '../../contact_us_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to Contact Us page
-@import '../../team_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to Team page
-@import '../../research_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to RESEARCH & PEDAGOGY page
-@import '../../iitbombayx_faq_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to IITBombayX FAQ page
-@import '../../learners_faq_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to Learners FAQ page
-@import '../../tos_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to TOS page
-@import '../../privacy_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to Privacy policy page
-@import '../../courses_about_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to Course About page
-@import '../../courses_search_page'; //IITBombayX-2016, Added by Nitin Ayer, to compile new SCSS file related to Course Search page
+//Release: Eucalyptus.3 for IIMB
+//Description: New SCSS files related static pages imported
+//Author: Nitin Ayer
+//Date: 06/03/2017
+@import '../../index'; //SCSS file related to index page
+@import '../../register_login'; //SCSS file related to Register, Login and Password reset page
+@import '../../courses_search'; //SCSS file related to Courses page
+@import '../../courses_about'; //SCSS file related to Course About page
+@import '../../tos'; //SCSS file related to TOS page
+@import '../../privacy_policy';//SCSS file related to Privacy policy page
+@import '../../contact'; //SCSS file related to Contact Us page
+@import '../../faq'; //SCSS file related to Learners FAQ page
+@import '../../_programme_faq'; //SCSS file related to Programmes FAQ pages
+@import '../../_programme_overview'; //SCSS file related to Programmes Overview pages
+@import '../../_faculty_details'; //SCSS file related to Faculty Programme at a Glance page
+@import '../../_corporate_details'; //SCSS file related to Corporate Programme at a Glance page
+@import '../../_academic_details'; //SCSS file related to Academic Programme at a Glance page
+@import '../../_about'; //SCSS file related to About page
+@import '../../_programmes'; //SCSS file related to Programmes page

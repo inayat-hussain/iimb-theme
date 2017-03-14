@@ -1,0 +1,65 @@
+<%inherit file="../main.html" />
+<%namespace name='static' file='../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: language setting commented as it is not required
+Author: Nitin Ayer
+Date: 09/03/2017-->
+<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
+
+<%block name="pagetitle">${_("Corporate Partnership")}</%block>
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: bodyclass block added to write CSS in SCSS file and SCSS for this page is in _programme_overview.scss file in themes directory
+Author: Nitin Ayer
+Date: 09/03/2017-->
+<%block name="bodyclass">programme_overview</%block>
+
+<html>
+<head>
+</head>
+<body>
+<div class="outer_container">
+	<div class="main_content">
+		<div class="banner">
+			<img class="main_banner" src=${static.url('images/corporate/corporate.png')}>
+		</div>
+
+		<div class="tagline">
+			<h2>Corporate Partnership</h2>
+		</div>
+
+		<div class="content">
+			<div class="left_content">
+				<div class="sidebar">
+					<ul class="sidemenu">
+						<li><a class="links-active" href="${marketing_link('CORPORATE_OVERVIEW')}">Overview</a></li>
+						<li><a class="links_sidebar" href="${marketing_link('CORPORATE_DETAILS')}">Programme at a glance</a></li>
+						<li><a class="links_sidebar" href="${marketing_link('CORPORATE_FAQ')}">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="right_content">
+				<div class="right_content_text">
+					<p>Corporate Partnership Programmes from ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} enable learners across the world to access high quality online courses from India’s premier management institution with the flexibility to learn anytime, anywhere. ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offers blended Small Private Online Courses (SPOCs) - a hybrid of synchronous and asynchronous online sessions to cater to the learning needs and busy schedules of working professionals.</p>
+					<div class="tagline_inner">
+					<h2>Key Benefits to Learners</h2>
+					</div>
+					<div class="image_class_one_border">
+					<img src=${static.url('images/corporate/corporate_image01.png')} />
+					</div>
+					<div class="tagline_inner">
+					<h2>Key Benefits for Corporate Organizations</h2>
+					</div>
+					<div class="image_class_two">
+					<img src=${static.url('images/corporate/corporate_image02.png')} />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

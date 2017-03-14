@@ -1,0 +1,81 @@
+//Release: Eucalyptus.3 for IIMB
+//Description: This file contains CSS related to Courses page.
+//Author: Nitin Ayer
+//Date: 09/03/2017
+
+.courses_search_page {
+//CSS for header
+  .header-global nav {
+   max-width: 1200px;
+   width: 1200px;
+   padding: 10px 0px 0px 0px;
+  }
+
+  .header-global{
+   position: fixed;
+   top: 0px;
+
+   .nav-global {
+    margin-top: 18px;
+
+    li {
+   vertical-align: top;
+   }
+  }
+
+    h1.logo a img {
+    height: 70px;
+  }
+ }
+
+//CSS added for header option highlight
+.nav-global-03 a{
+ color: $link-color !important;
+}
+
+
+//CSS to hide search option from header 
+ .header-global .nav-global-04{
+  display:none;
+ }
+
+//CSS for content-wrapper div
+ .content-wrapper{
+  margin-top: 76px;
+  background: $white;
+  padding-bottom: 40px;
+ }
+
+ .find-courses{
+   background: $white;
+
+  .courses-container{
+    max-width: 1170px;
+
+    .courses-listing .courses-listing-item {
+     margin: 15px 7px 15px 8px !important;
+     width: calc(25% - 15px) !important;
+     clear: none !important;
+
+     &:nth-child(3n+1) {
+      clear: initial !important;
+     }
+     &:nth-child(4n+1) {
+      clear: left !important;
+     }
+    }
+
+   .search-facets.phone-menu {
+    display:none;
+   }
+
+   .courses:not(.no-course-discovery){
+     width: 100% !important;
+     background: $course_block-bg;
+     margin-right: 0px !important;
+     padding-top: 0px;
+     margin-top: 40px;
+   } 
+  }
+ }
+}

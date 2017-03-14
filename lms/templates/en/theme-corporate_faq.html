@@ -1,0 +1,62 @@
+<%inherit file="../main.html" />
+<%namespace name='static' file='../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: language setting commented as it is not required
+Author: Nitin Ayer
+Date: 09/03/2017-->
+<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
+
+<%block name="pagetitle">${_("Corporate Partnership")}</%block>
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: bodyclass block added to write CSS in SCSS file and SCSS for this page is in _programme_faq.scss file in themes directory
+Author: Nitin Ayer
+Date: 09/03/2017-->
+<%block name="bodyclass">programme_faq</%block>
+
+<html>
+<head>
+</head>
+<body>
+<div class="outer_container">
+	<div class="main_content">
+		<div class="banner">
+			<img class="main_banner" src=${static.url('images/corporate/corporate.png')}>
+		</div>
+
+		<div class="tagline">
+			<h2>Corporate Partnership</h2>
+		</div>
+
+		<div class="content">
+			<div class="left_content">
+				<div class="sidebar">
+					<ul class="sidemenu">
+						<li><a class="links_sidebar" href="${marketing_link('CORPORATE_OVERVIEW')}">Overview</a></li>
+						<li><a class="links_sidebar" href="${marketing_link('CORPORATE_DETAILS')}">Programme at a glance</a></li>
+						<li><a class="links-active" href="${marketing_link('CORPORATE_FAQ')}">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="right_content">
+				<div class="right_content_text">
+					<h2 class="header_text_first">Enrollment</h2>
+					<p class="question">How to enrol for this programme?</p>
+					<p class="answer">Enrolments to our Corporate Partnership Programmes are offered on a case-to-case basis, based on the organizational requirements.<br />For further details, write to <a href="mailto:digital.learning@${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.edu.in" class="links-active2">digital.learning@${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.edu.in</a></p>
+					<p class="question">Is this a certified programme?</p>
+					<p class="answer">Participants who successfully complete the online programme will receive an ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Certificate of Completion signed by the Chairperson-MOOCs Initiatives.</p>
+					<h2 class="header_text">Exams and Certificates</h2>
+					<p class="question">What courses are offered through this programme?</p>
+					<p class="answer">The bouquet of courses offered by ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} is available on <a class="links-active2" href="${marketing_link('COURSES')}" target="_blank">Course</a> Page.<br />Organizations can browse through the courses and contact us with their requirements at: <a href="mailto:digital.learning@${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.edu.in" class="links-active2">digital.learning@${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.edu.in</a></p>
+					<h2 class="header_text">Any other queries?</h2>
+					<p class="answer">For any other queries, check General <a class="links-active2" href="${marketing_link('FAQ')}" target="_blank">FAQ</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
