@@ -32,7 +32,7 @@
  .content-wrapper {
   margin-top: 76px;
   background: $white;
-  padding-bottom: 0px;
+  padding-bottom: 60px;
  }
 
 //CSS added for header option highlight
@@ -45,7 +45,7 @@
   text-align: center !important;
   display: table;
   margin: auto;
-  padding-bottom: 20px;
+  padding: 0px;
 
   .courses-more-cta {
    display: table;
@@ -136,7 +136,7 @@
   color: $black_font_color;
   line-height: normal;
   letter-spacing: normal;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px 0px 0px;
  }
 
  .tagline_inner > h2{
@@ -146,13 +146,14 @@
   color: $link-color;
   line-height: normal;
   letter-spacing: normal;
-  padding: 50px 0px 15px 0px;
+  padding: 60px 0px 0px 0px;
+  margin: auto;
   text-align:center;
   text-transform: none;
  }
 
  .image_layer_one{
-  padding: 0px 70px 0px 70px;
+  padding: 20px 70px 0px 70px;
   margin:auto;
   display:inline-block;	
  }
@@ -191,7 +192,7 @@
  }
 
  .image_layer_two {
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px 0px 0px;
   margin:auto;
   display:inline-block;
 
@@ -226,13 +227,14 @@
   width: 100%;
   height: 100%;
   background:transparentize($link-color, .7);
-  margin: 50px 0px 50px 0px;
+  margin: 60px 0px 0px 0px;
   display: inline-block;
   min-width: -moz-fit-content;
   }
 
  .container_two{
   width: 75%;
+  max-width: 1200px;
   height:100%;
   margin:auto;
   transform: skewX(-20deg);
@@ -276,7 +278,7 @@
   width: -moz-fit-content;
   display:block;
   margin: 0;
-  padding: 44% 15% 40% 10%;
+  padding: 24% 15% 18% 10%;
   text-align:left;
   transform: skewX(20deg);
   -webkit-transform: skewX(20deg);
@@ -309,7 +311,7 @@
    color: $black;
    text-align: left;
    margin: 15px 0px 10px 0px;
-   display: inline-block;
+   display: block;
    line-height: normal;
   }
  }
@@ -330,7 +332,7 @@
   background-repeat: no-repeat;
   background-size: 100%;
   width: 35%;
-  background-position-y: 4px;
+  background-position-y: 5px;
 
   a {
    color:$link-color;

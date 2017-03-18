@@ -103,6 +103,7 @@
    .courses-listing .courses-listing-item {
     margin: 15px 7px 15px 8px;
     width: calc(25% - 15px);
+    clear: none !important;
   }
  }
 }
@@ -190,7 +191,7 @@
     }
 
     img {
-     width: 200px;
+     width: 100px;
     }
 
     p {

@@ -32,7 +32,7 @@
  .content-wrapper{
   margin-top: 76px;
   background: $white;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
  }
 
 //CSS added for header option highlight
@@ -69,8 +69,8 @@
   h2 {
    color: $link-color;
    font-family: $font_family1;
-   font-size: 56px;
-   font-weight: 300;
+   font-size: 26px;
+   font-weight: 600;
    font-style:italic;
    letter-spacing: 0em;
    text-transform: none;
@@ -84,8 +84,8 @@
 
  .container_one {
   width: 100%;
-  height: 380px;
-  margin: 0px 0px 80px 0px;
+  height: 320px;
+  margin: 0px 0px 60px 0px;
   background: $table-coloumn_bg;
   display: block;
   box-sizing:border-box;
@@ -175,10 +175,12 @@
  }
 
  .about_video{
-  width: 40%;
+  width: 41.5%;
+  max-width: 41.5%;
   margin:auto;
   padding: 0px 0px 0px 100px;
   display:inline-block;
+  float: right;
  }
 
  .main_content > ul{
@@ -187,15 +189,18 @@
   list-style: none;
   box-sizing: border-box;
   display: inline-block;
+  height: 250px;
 
   li{
   display:inline-block;
   float:left;
   width:400px;
+  height: 100%;
 
   div{
    display: inline-block;
    float: left;
+   height: 100%;
 
    img{
     width:140px;
@@ -250,8 +255,8 @@
 
  .container_four {
   width: 100%;
-  height: 380px;
-  margin: 0px 0px 80px 0px;
+  height: 300px;
+  margin: 60px 0px 60px 0px;
   background:$link-color;
   display: block;
   box-sizing:border-box;
@@ -292,7 +297,7 @@
   max-height:100%;
   line-height: normal;
   margin: auto;
-  padding: 80px 0px 40px 0px;
+  padding: 20px 0px 20px 0px;
   display:block;
   box-sizing:border-box;
  }
@@ -311,7 +316,7 @@
  
   h2{
   margin: 0;
-  color: $white;
+  color: $black_font_color;
   font-family: $font_family1;
   padding: 0px 0px 15px 0px;
   font-size: 18px;
@@ -322,7 +327,7 @@
 
   p {
   margin: 0;
-  color:$white;
+  color: $black_font_color;
   font-size: 14px;
   padding: 0px 0px 20px 0px;
   line-height: normal;
@@ -341,7 +346,7 @@
   .gif_video {
    display: inline-block;
    float: left;
-   padding: 0px 20px 0px 0px;
+   padding: 0px 0px 0px 0px;
    height:100%;
 
   .gif_bg {
@@ -362,7 +367,7 @@
  .bullets{
   display: inline-block;
   float: right;
-  margin: 50px 0px 50px 0px;
+  margin: 50px -15px 50px 0px;
  
   ul{
    padding: 0;
@@ -388,7 +393,7 @@
  .image_layer{
   margin:auto;
   padding:0px 30px 0px 30px;
-  height: 300px;
+  height: 200px;
   display:block;
 
   ul{
@@ -411,7 +416,7 @@
   }
 
   img{
-   width: 300px;
+   width: 200px;
    display: block;
    }
   }
@@ -419,25 +424,24 @@
 }
 
  .text_one{
-  font-size: 82px;
+  font-size: 64px;
   font-weight: 800;
   color: $link-color;
   margin: 0px;
   padding: 0px 0px 0px 0px;
   position:relative;
-  top:-200px;
+  top:-140px;
   line-height:100%;
  }
 
  .text_two{
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 800;
   color: $white;
   margin: 0px;
   padding: 0px 0px 0px 0px;
   position:relative;
-  top:-190px;
+  top:-135px;
   line-height:125%;
-  text-transform:uppercase;
  }
 }

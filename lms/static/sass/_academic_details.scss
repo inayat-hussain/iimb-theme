@@ -146,7 +146,7 @@
  }
 
  .answer{
-  margin: 0px 0px 20px 0px;
+  margin: 0px;
  }
 
  .header_text_first {
@@ -156,7 +156,7 @@
   color: $link-color;
   line-height: normal;
   letter-spacing: normal;
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 0px 0px;
   text-transform: none;
  }
 
@@ -168,7 +168,7 @@
   line-height: normal;
   letter-spacing: normal;
   text-transform: none;
-  margin: 30px 0px 15px 0px;
+  margin: 60px 0px 0px 0px;
  }
 
  .ul_class {
@@ -190,7 +190,7 @@
   margin: auto;
   text-align: center;
   display: block;
-  padding: 40px 0px 40px 0px;
+  padding: 30px 0px 30px 0px;
   height: 202px;
 
   ul {
@@ -245,7 +245,6 @@
   line-height: normal !important;
   color: $white !important;
   font-size:74px !important;
-  font-style:italic;
   font-weight:400;
   font-family: $font_family1;
  }
@@ -256,7 +255,6 @@
   line-height: 49% !important;
   color: $white !important;
   font-size:74px !important;
-  font-style:italic;
   font-weight:400;
   font-family: $font_family1;
  }
@@ -292,17 +290,17 @@
 
  .brochure_download{
   width:100%;
-  padding: 40px 0px 50px 0px;
+  padding: 10px 0px 10px 0px;
   text-align:center;
   display:block;
 
   a {
    background:url('../images/academic/academic_image03.png');
-   background-size:100%;
+   background-size:100% 100%;
    background-repeat:no-repeat;
    color: $white !important;
    text-decoration:none;
-   padding: 0px 35px 0px 30px;
+   padding: 5px 45px 5px 40px;
    text-align:center;
    font-size:14px;
    font-weight:600;
@@ -313,7 +311,7 @@
   width: 100%;
   margin: auto;
   display: block;
-  padding: 40px 0px 40px 0px;
+  padding: 20px 0px 0px 0px;
   height: 278px;
   overflow: hidden;
   text-align:center;
@@ -378,7 +376,8 @@
   color: $link-color;
   line-height: normal;
   letter-spacing: normal;
-  padding: 50px 0px 15px 0px;
+  padding: 60px 0px 0px 0px;
+  margin: auto;
   text-align: center;
   text-transform: none;
  }
@@ -387,14 +386,14 @@
   width: 100%;
   display: block;
   padding: 15px 40px 15px 40px;
-  margin: 80px 0px 40px 0px;
+  margin: 60px 0px 0px 0px;
   background:url('../images/faculty/faculty_image03.png');
   background-size: 100% 100%;
   background-repeat:no-repeat; 
 
   p {
    margin:auto;
-   color: $white;
+   color: $black_font_color;
    line-height: normal;
    letter-spacing: 0;
    font-family: $font_family1;
@@ -408,7 +407,7 @@
 
   .testimonial_quote{
    font-size: 14px;
-   font-weight: 600;
+   font-weight: 400;
   }
 
   .testimonial_signature{

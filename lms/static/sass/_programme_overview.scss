@@ -132,6 +132,7 @@
    color: $black_font_color;
    line-height: 1.5em;
    letter-spacing: normal;
+   margin: 0px 0px 10px 0px;
 
    strong {
     color: $black_font_color;
@@ -173,11 +174,11 @@
 
  .ul_class {
   margin: 0px;
-  padding: 10px 0px 40px 15px;
+  padding: 0px 0px 0px 15px;
   line-height: 1.5em;
   letter-spacing: normal;
   font-size: 16px;
-  color: #2e2e2e;
+  color: $black_font_color;
   list-style-image: url('../images/red_dot.png');
 
   li > span {
@@ -189,7 +190,7 @@
   margin: auto;
   text-align: center;
   width: 100%;
-  padding: 40px 0px 50px 0px;
+  padding: 20px 0px 40px 0px;
   border-bottom: 1px solid $border-color-l3;
  }
 
@@ -197,7 +198,7 @@
   margin: auto;
   text-align: center;
   width: 100%;
-  padding: 40px 0px 50px 0px;
+  padding: 20px 0px 40px 0px;
 
   img {
    width: 870px;
@@ -215,7 +216,7 @@
   margin: auto;
   text-align: center;
   width: 100%;
-  padding: 40px 0px 50px 0px;
+  padding: 20px 0px 40px 0px;
 
   img {
    width: 500px;
@@ -230,7 +231,8 @@
   color: $link-color;
   line-height: normal;
   letter-spacing: normal;
-  padding: 50px 0px 15px 0px;
+  padding: 60px 0px 0px 0px;
+  margin: auto;
   text-align:center;
   text-transform: none;
  }

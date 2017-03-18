@@ -31,7 +31,59 @@ Date: 13/03/2017-->
 		</div>
 
 		<div class="content">
-			<p class="question">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offers online courses in the management discipline through various programmes.</p>
+			<p class="question">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offers online business and management courses to cater to learning requirements of educational institutions and corporates. With ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} programmes, students can acquire basic business literacy and working professionals can stay up-to-date in the evolving business landscape. Currently, ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offers programmes in three formats.</p>
+		</div>
+	</div>
+
+	<div class="container_one">
+		<div class="container_two">
+			<ul>
+				<li>
+					<div class="text_content">
+						<a href="${marketing_link('ACADEMIC_OVERVIEW')}" target="_blank"><img src=${static.url('images/programmes/programmes_image13.png')} /></a>
+						<p class="programme_name">Academic<br />Partnership<br />Programme</p>
+						<p class="text">For students at undergraduate and graduate levels to gain business and managerial skills alongside their professional degree.</p>
+					</div>
+					<div class="page_link"><a href="${marketing_link('ACADEMIC_OVERVIEW')}" target="_blank">learn more</a></div>
+				</li><li>
+					<div class="text_content">
+						<a href="${marketing_link('CORPORATE_OVERVIEW')}" target="_blank"><img src=${static.url('images/programmes/programmes_image14.png')} /></a>
+						<p class="programme_name">Corporate<br />Partnership<br />Programme</p>
+						<p class="text">For working professionals to advance their professional journey through specialized electives for a distinctive edge at work.</p>
+					</div>
+					<div class="page_link"><a href="${marketing_link('CORPORATE_OVERVIEW')}" target="_blank">learn more</a></div>
+				</li><li>
+					<div class="text_content">
+						<a href="${marketing_link('FACULTY_OVERVIEW')}" target="_blank"><img src=${static.url('images/programmes/programmes_image15.png')} /></a>
+						<p class="programme_name">Faculty<br />Development<br />Programme</p>
+						<p class="text">For instructors to remodel the teaching-learning experience using technology.<br>&nbsp;</p>
+					</div>
+					<div class="page_link"><a href="${marketing_link('FACULTY_OVERVIEW')}" target="_blank">learn more</a></div>
+				</li></ul></div>
+	</div>
+
+
+	<div class="main_content">
+		<div class="tagline_inner">
+			<h2>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Course Highlights</h2>
+		</div>
+
+		<div class="image_layer_two">
+			<ul class="course_highlights">
+				<li>
+					<img src=${static.url('images/programmes/programmes_image09.png')} />
+					<p>Interactive Multimedia Courseware</p>
+				</li><li>
+					<img src=${static.url('images/programmes/programmes_image10.png')} />
+					<p>Community Based Learning</p>
+				</li><li>
+					<img src=${static.url('images/programmes/programmes_image11.png')} />
+					<p>Virtual Live Sessions with IIMB Faculty</p>
+				</li><li>
+					<img src=${static.url('images/programmes/programmes_image12.png')} />
+					<p>Realtime Learner Analytics</p>
+				</li>
+			</ul>
 		</div>
 
 		<div class="tagline_inner">
@@ -70,62 +122,6 @@ Date: 13/03/2017-->
 
 		<div class="courses-more">
 			<a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses >>")} </a>
-		</div>
-
-
-		<div class="tagline_inner">
-			<h2>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Course Highlights</h2>
-		</div>
-
-		<div class="image_layer_two">
-			<ul class="course_highlights">
-				<li>
-					<img src=${static.url('images/programmes/programmes_image09.png')} />
-					<p>Interactive Multimedia Courseware</p>
-				</li><li>
-					<img src=${static.url('images/programmes/programmes_image10.png')} />
-					<p>Community Based Learning</p>
-				</li><li>
-					<img src=${static.url('images/programmes/programmes_image11.png')} />
-					<p>Virtual Live Sessions with IIMB Faculty</p>
-				</li><li>
-					<img src=${static.url('images/programmes/programmes_image12.png')} />
-					<p>Realtime Learner Analytics</p>
-				</li>
-			</ul>
-		</div>
-
-		<div class="tagline_inner">
-			<h2>Engage With ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</h2>
-		</div>
-	</div>
-
-	<div class="container_one">
-		<div class="container_two">
-			<ul>
-				<li>
-					<div class="text_content">
-						<img src=${static.url('images/programmes/programmes_image13.png')} />
-						<p class="programme_name">Academic<br />Partnership<br />Programme</p>
-						<p class="text">For students at undergraduate and graduate levels to gain business and managerial skills alongside their professional degree.</p>
-					</div>
-					<div class="page_link"><a href="${marketing_link('ACADEMIC_OVERVIEW')}" target="_blank">learn more</a></div>
-				</li><li>
-					<div class="text_content">
-						<img src=${static.url('images/programmes/programmes_image14.png')} />
-						<p class="programme_name">Corporate<br />Partnership<br />Programme</p>
-						<p class="text">For working professionals to advance their professional journey through specialized electives for a distinctive edge at work.</p>
-					</div>
-					<div class="page_link"><a href="${marketing_link('CORPORATE_OVERVIEW')}" target="_blank">learn more</a></div>
-				</li><li>
-					<div class="text_content">
-						<img src=${static.url('images/programmes/programmes_image15.png')} />
-						<p class="programme_name">Faculty<br />Development<br />Programme</p>
-						<p class="text">For instructors to remodel the teaching-learning experience using technology.<br>&nbsp;</p>
-					</div>
-					<div class="page_link"><a href="${marketing_link('FACULTY_OVERVIEW')}" target="_blank">learn more</a></div>
-				</li>
-			</ul>
 		</div>
 	</div>
 
