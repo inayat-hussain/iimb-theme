@@ -1,14 +1,20 @@
 <%inherit file="../main.html" />
-<!--Bharat Moocs Added on 23 Sep for language option -->
-<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
 <%namespace name='static' file='../static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
-<!--IITBombayX: language setting commented as it is not required and microsite configuration removed-->
-<!--IITBombayX: main.html and static_content.html file path changed-->
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: language setting commented as it is not required
+Author: Nitin Ayer
+Date: 09/03/2017-->
+<%doc><%include file='../../modal/_modal-settings-language.html'/></%doc>
 
 <%block name="pagetitle">${_("Terms of Service")}</%block>
-<%block name="bodyclass">tos_page</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
-<!--IITBombayX-2016, CSS for this page is written in _tos_page.scss inside theme folder by Nitin Ayer-->
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: bodyclass block added to write CSS in SCSS file and SCSS for this page is in _tos.scss file in themes directory
+Author: Nitin Ayer
+Date: 20/03/2017-->
+<%block name="bodyclass">tos_page</%block>
 
 <html>
 <head>
