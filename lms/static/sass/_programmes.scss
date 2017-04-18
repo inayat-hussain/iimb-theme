@@ -5,26 +5,27 @@
 
 .programmes{
 //CSS for header
+//Release: Eucalyptus.3 for IIMB
+//Description: Header logo size fixed
+//Author: Nitin Ayer
+//Date: 18/04/2017
   .header-global nav {
    max-width: 1200px;
    width: 1200px;
-   padding: 10px 0px 0px 0px;
+   padding: 18px 0px 0px 0px;
   }
 
   .header-global {
    position: fixed;
    top: 0px;
 
-   .nav-global {
-    margin-top: 18px;
-
-    li {
-   vertical-align: top;
+   .nav-global li {
+    vertical-align: top;
    }
-  }
 
-    h1.logo a img {
+   h1.logo a .logo_image_one {
     height: 70px;
+    margin: -8px 0px 0px 0px;
   }
  }
 

@@ -5,26 +5,28 @@
 
 .courses_search_page {
 //CSS for header
+//Release: Eucalyptus.3 for IIMB
+//Description: Header logo size fixed
+//Author: Nitin Ayer
+//Date: 18/04/2017
   .header-global nav {
    max-width: 1200px;
    width: 1200px;
-   padding: 10px 0px 0px 0px;
+   padding: 18px 0px 0px 0px;
   }
 
-  .header-global{
+  .header-global {
    position: fixed;
    top: 0px;
+   z-index: 50;
 
-   .nav-global {
-    margin-top: 18px;
-
-    li {
-   vertical-align: top;
+   .nav-global li {
+    vertical-align: top;
    }
-  }
 
-    h1.logo a img {
+   h1.logo a .logo_image_one {
     height: 70px;
+    margin: -8px 0px 0px 0px;
   }
  }
 
@@ -52,9 +54,34 @@
   .courses-container{
     max-width: 1170px;
 
+//CSS for course search button
+    .discovery-input {
+     border: 2px solid $border-color-l2;
+
+     &:hover, &:active, &:focus, &:focus:not(:disabled), &:hover:not(:disabled) {
+      border: 2px solid $border-color-l2;
+     }
+    }
+
+    .discovery-submit {
+     background: $button-color;
+     border: 2px solid $button-color;
+
+     &:hover, &:active, &:focus, &:focus:not(:disabled), &:hover:not(:disabled) {
+      background: $link-color;
+      border: 2px solid $button-color;
+      box-shadow: none;
+     }
+    }
+
+    .loading-spinner {
+     background: $link-color;
+    }
+
     .courses-listing .courses-listing-item {
      margin: 15px 7px 15px 8px !important;
      width: calc(25% - 15px) !important;
+     float: left;
      clear: none !important;
 
      &:nth-child(3n+1) {
@@ -62,6 +89,17 @@
      }
      &:nth-child(4n+1) {
       clear: left !important;
+     }
+    }
+
+//CSS for Course tile border and Course name
+    .courses .course {
+     border-left: none;
+     border-top: none;
+     border-right: none;
+
+     .course-info .course-title {
+      color: $black-80;
      }
     }
 

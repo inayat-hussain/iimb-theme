@@ -5,26 +5,27 @@
 
 .about {
 //CSS for header
+//Release: Eucalyptus.3 for IIMB
+//Description: Header logo size fixed
+//Author: Nitin Ayer
+//Date: 18/04/2017
   .header-global nav {
    max-width: 1200px;
    width: 1200px;
-   padding: 10px 0px 0px 0px;
+   padding: 18px 0px 0px 0px;
   }
 
-  .header-global{
+  .header-global {
    position: fixed;
    top: 0px;
 
-   .nav-global {
-    margin-top: 18px;
-
-    li {
-   vertical-align: top;
+   .nav-global li {
+    vertical-align: top;
    }
-  }
 
-    h1.logo a img {
+   h1.logo a .logo_image_one {
     height: 70px;
+    margin: -8px 0px 0px 0px;
   }
  }
 
@@ -215,14 +216,18 @@
   width: 140px;
   max-width:140px;
   padding: 25px 0px 0px 0px;	
- 
+
+  //Release: Eucalyptus.3 for IIMB
+  //Description: Font size decreaded
+  //Author: Nitin Ayer
+  //Date: 18/04/2017
   p {
    position:relative;
-   top: -110px;
+   top: -100px;
    left: -10px;
    padding:0px;
    margin:0px;
-   font-size: 96px;
+   font-size: 72px;
    font-weight:400;
    font-style:italic;
    text-align:center;
@@ -425,8 +430,12 @@
  }
 }
 
+  //Release: Eucalyptus.3 for IIMB
+  //Description: Font size decreaded
+  //Author: Nitin Ayer
+  //Date: 18/04/2017
  .text_one{
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 800;
   color: $link-color;
   margin: 0px;

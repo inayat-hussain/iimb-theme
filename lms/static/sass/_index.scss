@@ -5,26 +5,27 @@
 
 .index-page {
 //CSS for header
+//Release: Eucalyptus.3 for IIMB
+//Description: Header logo size fixed
+//Author: Nitin Ayer
+//Date: 18/04/2017
   .header-global nav {
    max-width: 1200px;
    width: 1200px;
-   padding: 10px 0px 0px 0px;
+   padding: 18px 0px 0px 0px;
   }
 
-  .header-global{
+  .header-global {
    position: fixed;
    top: 0px;
 
-   .nav-global {
-    margin-top: 18px;
-
-    li {
-   vertical-align: top;
+   .nav-global li {
+    vertical-align: top;
    }
-  }
 
-    h1.logo a img {
+   h1.logo a .logo_image_one {
     height: 70px;
+    margin: -8px 0px 0px 0px;
   }
  }
 
@@ -91,6 +92,14 @@
   margin:auto;
   padding: 18px 8px 0px 7px;
   max-width: 1185px;
+
+//Release: Eucalyptus.3 for IIMB
+//Description: Course name color changed in course tile
+//Author: Nitin Ayer
+//Date: 28/03/2017
+ .courses .course .course-info .course-title {
+   color: $black-80;
+  }
  }
 
 //CSS for course listing tiles
@@ -103,6 +112,7 @@
    .courses-listing .courses-listing-item {
     margin: 15px 7px 15px 8px;
     width: calc(25% - 15px);
+    float: left;
     clear: none !important;
   }
  }

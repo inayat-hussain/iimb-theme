@@ -467,10 +467,12 @@ $iitbx_faq_image02: url('../images/FAQ/arrow_down.png');
 }
 
 //Release: Eucalyptus.3 for IIMB
-//Description: CSS for Course search box in header
+//Description: 1. CSS for Course search box in header
+//             2. CSS for course search box(after log in) in header added
+//             3. Font size chnaged from 16px to 14px
 //Author: Nitin Ayer
-//Date: 06/03/2017
- .header-global .nav-courseware .title{
+//Date: 18/04/2017
+ .header-global .nav-courseware .title, .header-global .nav-global .title {
   margin: 0px;
   background: none;
   box-shadow: none;
@@ -485,11 +487,15 @@ $iitbx_faq_image02: url('../images/FAQ/arrow_down.png');
   vertical-align: middle;
  }
 
- .header-global .nav-courseware .title form{
+ .header-global .nav-global .title {
+  margin: -3px 0px 0px 0px;
+ }
+
+ .header-global .nav-courseware .title form, .header-global .nav-global .title form{
   display: inline-block;
  }
 
- .header-global .nav-courseware .course-search .search-input{
+ .header-global .nav-courseware .course-search .search-input, .header-global .nav-global .course-search .search-input{
   background: $search-bar-gray;
   border: 1px solid $white;
   height: 30px;
@@ -503,7 +509,7 @@ $iitbx_faq_image02: url('../images/FAQ/arrow_down.png');
   color: $black;
   font-weight: 600;
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
   font-family:$font_family1;
 
   &:hover, &:focus, &:active, &:focus:not(:disabled), &:hover:not(:disabled){
@@ -514,7 +520,7 @@ $iitbx_faq_image02: url('../images/FAQ/arrow_down.png');
  }
 }
 
- .header-global .nav-courseware .course-search .search-button{
+ .header-global .nav-courseware .course-search .search-button, .header-global .nav-global .course-search .search-button {
   height: 30px;
   border: 2px solid transparent;
   background: transparent;
@@ -534,14 +540,10 @@ $iitbx_faq_image02: url('../images/FAQ/arrow_down.png');
  }
 }
 
- .header-global .nav-courseware .fa{
+ .header-global .nav-courseware .fa, .header-global .nav-global .fa {
   color: $white;
   font-size: 18px
  }
-
-// .header-global .nav-courseware .title .course-search .search-input:focus{
-//  border: 1px solid $gray-1;
-// }
 
 //Release: Eucalyptus.3 for IIMB
 //Description: New SCSS files related static pages imported

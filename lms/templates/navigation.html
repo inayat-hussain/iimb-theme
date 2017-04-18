@@ -6,7 +6,7 @@
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 #Release: Eucalyptus.3 for IIMB
-#Description: Explorer Courses changed to Courses and Search option added for IIMB
+#Description: settings imported
 #Author: Nitin Ayer
 #Date: 07/03/2017
 from django.conf import settings
@@ -53,7 +53,15 @@ site_status_msg = get_site_status_msg(course_id)
   <header id="global-navigation" class="header-global ${"slim" if course else ""}" >
     <nav class="wrapper-header" aria-label="${_('Global')}">
     <h1 class="logo">
+    <!--Release: Eucalyptus.3 for IIMB
+    Description: logos changed from PNG to SVG format
+    Author: Nitin Ayer
+    Date: 17/04/2017-->
+    % if user.is_authenticated():
       <a href="${marketing_link('ROOT')}">
+    % else:
+      <a class="platformlogo_url" href="${marketing_link('ROOT')}">
+    % endif:
         <%block name="navigation_logo">
             <img src="${static.url(branding_api.get_logo_url())}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
@@ -77,9 +85,31 @@ site_status_msg = get_site_status_msg(course_id)
         <ol class="left nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
-            <li class="item nav-global-01">
-              <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+	    <!--Release: Eucalyptus.3 for IIMB
+	    Description: Menu option added after user is logged in
+	    Author: Nitin Ayer
+	    Date: 17/04/2017-->
+            <li class="nav-global-01">
+              <a class="cta cta-register" href="${marketing_link('ABOUT')}">${_("About")}</a>
             </li>
+            <li class="nav-global-02">
+              <a class="cta cta-register" href="${marketing_link('PROGRAMMES_PAGE')}">${_("Programmes")}</a>
+            </li>
+            <li class="item nav-global-03">
+              <a href="${marketing_link('COURSES')}">${_('courses')}</a>
+            </li>
+	    <li class="nav-global-04">
+		<div class="title">
+			<div class="course-search">
+				<form method="get" action="/courses">
+					<input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+                                        <button class="search-button" type="submit">
+                                        <i class="icon fa fa-search" aria-hidden="true"></i>
+                                        </button>
+                                </form>
+                        </div>
+                </div>
+	    </li>
           % endif
           % if show_program_listing:
             <li class="tab-nav-item">
@@ -167,11 +197,12 @@ Description:
 1. Added second logo of IIMB
 2. Course Search and Register Now option added with Login option
 3. Login button text changed from "Sign in" to "Login"
+4. logos changed from PNG to SVG format
 Author: Nitin Ayer
-Date: 07/03/2017-->
+Date: 17/04/2017-->
 	<h1 class="platform_logo">
 		<a href="${marketing_link('ROOT')}">
-			<img src=${static.url('images/headerlogo.png')} alt="Home Page" />
+			<img src=${static.url('images/headerlogo.svg')} alt="Home Page" />
 		</a>
 	</h1>
       <ol class="right nav-courseware list-inline">

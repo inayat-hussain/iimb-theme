@@ -7,12 +7,13 @@
 <%block name="navigation_logo">
 <!--
 Release: Eucalyptus.3 for IIMB
-Description: If condition added to check which logo to display, on basis of student is logged in or not
+Description: 1. If condition added to check which logo to display, on basis of student is logged in or not
+	     2. logos changed from PNG to SVG format
 Author: Nitin Ayer
-Date: 06/03/2017-->
+Date: 14/04/2017-->
         % if user.is_authenticated():
-                <img src=${static.url('images/headerlogo.png')} alt="Home Page" />
+                <img src=${static.url('images/headerlogo.svg')} alt="Home Page" />
         % else:
-                <img src=${static.url('images/headerlogo_institute.png')} alt="Home Page" />
+                <img class="logo_image_one" src=${static.url('images/headerlogo_institute.svg')} alt="Home Page" />
         % endif:
 </%block>

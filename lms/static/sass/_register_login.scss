@@ -5,26 +5,27 @@
 
 .register_login_page {
 //CSS for header
+//Release: Eucalyptus.3 for IIMB
+//Description: Header logo size fixed
+//Author: Nitin Ayer
+//Date: 18/04/2017
   .header-global nav {
    max-width: 1200px;
    width: 1200px;
-   padding: 10px 0px 0px 0px;
+   padding: 18px 0px 0px 0px;
   }
 
-  .header-global{
+  .header-global {
    position: fixed;
    top: 0px;
 
-   .nav-global {
-    margin-top: 18px;
-
-    li {
-   vertical-align: top;
+   .nav-global li {
+    vertical-align: top;
    }
-  }
 
-    h1.logo a img {
+   h1.logo a .logo_image_one {
     height: 70px;
+    margin: -8px 0px 0px 0px;
   }
  }
 
@@ -33,6 +34,11 @@
   margin-top: 76px;
   background: $white;
   padding-bottom: 40px;
+ }
+
+//CSS for border color of input fields
+ textarea, input[type="text"], input[type="email"], input[type="password"] {
+  border: 1px solid $border-color-l2;
  }
 
  .ui-autocomplete {
@@ -116,26 +122,27 @@
 
 .view-passwordreset {
 //CSS for header
+//Release: Eucalyptus.3 for IIMB
+//Description: Header logo size fixed
+//Author: Nitin Ayer
+//Date: 18/04/2017
   .header-global nav {
    max-width: 1200px;
    width: 1200px !important;
-   padding: 10px 0px 0px 0px;
+   padding: 18px 0px 0px 0px;
   }
 
-  .header-global{
+  .header-global {
    position: fixed;
    top: 0px;
 
-   .nav-global {
-    margin-top: 18px;
-
-    li {
-   vertical-align: top;
+   .nav-global li {
+    vertical-align: top;
    }
-  }
 
-    h1.logo a img {
+   h1.logo a .logo_image_one {
     height: 70px;
+    margin: -8px 0px 0px 0px;
   }
  }
 
@@ -144,6 +151,11 @@
   margin-top: 76px;
   background: $white;
   padding-bottom: 40px;
+ }
+
+//CSS for border color of input fields
+ textarea, input[type="text"], input[type="email"], input[type="password"] {
+  border: 1px solid $border-color-l2;
  }
 
 //CSS for password reset button
