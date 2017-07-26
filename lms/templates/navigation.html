@@ -155,7 +155,11 @@ Date: 21/07/2017-->
       % endif
     % else:
       <ol class="left list-inline nav-global">
-        <%block name="navigation_global_links">
+<!--Release: IIMBx Ficus release
+Description: Navigation links commented as ENABLE_MKTG_SITE is enabled
+Author: Nitin Ayer
+Date: 26/07/2017-->
+        <%doc><%block name="navigation_global_links">
           % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
             <li class="item nav-global-01">
               <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
@@ -169,7 +173,7 @@ Date: 21/07/2017-->
               <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
             </li>
           % endif
-        </%block>
+        </%block></%doc>
 
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
