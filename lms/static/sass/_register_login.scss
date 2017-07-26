@@ -4,113 +4,96 @@
 //Date: 08/03/2017
 
 .register_login_page {
-//CSS for header
-//Release: Eucalyptus.3 for IIMB
-//Description: Header logo size fixed
-//Author: Nitin Ayer
-//Date: 18/04/2017
-  .header-global nav {
-   max-width: 1200px;
-   width: 1200px;
-   padding: 18px 0px 0px 0px;
+
+  html {
+    background: $white !important;
   }
 
   .header-global {
    position: fixed;
    top: 0px;
-
-   .nav-global li {
-    vertical-align: top;
-   }
-
-   h1.logo a .logo_image_one {
-    height: 70px;
-    margin: -8px 0px 0px 0px;
-  }
- }
-
-//CSS for content-wrapper div
- .content-wrapper{
-  margin-top: 76px;
-  background: $white;
-  padding-bottom: 40px;
- }
-
-//CSS for border color of input fields
- textarea, input[type="text"], input[type="email"], input[type="password"] {
-  border: 1px solid $border-color-l2;
- }
-
- .ui-autocomplete {
-  background-color: rgba($gray-l4, 0.95);
-  width: 300px;
-  padding: 25px;
-  height: 100px;
-  border: 1px solid #222;
-  margin: 5px;
-  overflow: scroll;
- }
-
- .ui-menu-item{
-  list-style-type: none;
- }
-
- .ui-menu-item a {
-  color: $black !important;
-  cursor: pointer;
- }
-
- .ui-helper-hidden-accessible{
-  display: none;
- }
-
- .login-register .action-primary {
-  background: $button-color none repeat scroll 0% 0%;
-  box-shadow: 0px 2px 1px 0px $white;
-  color: $gray-1;
-  text-shadow: none;
-
-  &:hover{
-   box-shadow: none !important;
-   background: $link-color none repeat scroll 0% 0%;
   }
 
-  &:focus{
-   box-shadow: none !important;
-   background: $link-color none repeat scroll 0% 0%;
-   outline: 0px;
+  .content-wrapper{
+    margin-top: 76px;
+    background: $white;
+
+    textarea, input[type="text"], input[type="email"], input[type="password"] {
+      border: 1px solid $border-color-l2;
+    }
+
+    .ui-autocomplete {
+      background-color: rgba($gray-l4, 0.95);
+      width: 300px;
+      padding: 25px;
+      height: 100px;
+      border: 1px solid #222;
+      margin: 5px;
+      overflow: scroll;
+    }
+
+    .ui-menu-item{
+      list-style-type: none;
+
+      a {
+        color: $black !important;
+        cursor: pointer;
+      }
+    }
+
+    .ui-helper-hidden-accessible{
+      display: none;
+    }
+
+    .login-register {
+
+      .action-primary {
+	background: $button-color none repeat scroll 0% 0%;
+	box-shadow: 0px 2px 1px 0px $white;
+	color: $gray-1;
+	text-shadow: none;
+
+	&:hover, &:focus {
+	  box-shadow: none !important;
+	  background: $link-color none repeat scroll 0% 0%;
+	  outline: 0;
+	}
+      }
+
+      .nav-btn {
+	border: 1px solid $button-color;
+	color: $button-color;
+
+	&:hover {
+	  box-shadow: 0px 2px 1px 0px $white;
+	  background: $link-color none repeat scroll 0% 0%;
+	  color: $gray-1;
+	}
+
+	&:focus {
+	  box-shadow: none !important;
+	  background: $link-color none repeat scroll 0% 0%;
+	  color: $gray-1;
+	  outline: 0px;
+	}
+      }
+
+      .form-field {
+
+	.field-link {
+	  color: $button-color;
+
+	  label a {
+	    text-decoration: none;
+
+	    &:hover {
+	      border-bottom: 1px dotted $link-color;
+	    }
+	  }
+	}
+      }
+    }
   }
- }
-
- .login-register .nav-btn {
-  border: 1px solid $button-color;
-  color: $button-color;
-
-  &:hover {
-   box-shadow: 0px 2px 1px 0px $white;
-   background: $link-color none repeat scroll 0% 0%;
-   color: $gray-1;
-  }
-
-  &:focus {
-   box-shadow: none !important;
-   background: $link-color none repeat scroll 0% 0%;
-   color: $gray-1;
-   outline: 0px;
-  }
- }
-
- .login-register .form-field .field-link{
-  color: $button-color;
- }
-
- .login-register .form-field label a {
-  text-decoration: none;
-
-   &:hover {
-   border-bottom: 1px dotted $link-color;
-  }
- }
 }
 
 
@@ -119,65 +102,42 @@
 //Author: Nitin Ayer
 //Date: 08/03/2017
 
-
 .view-passwordreset {
-//CSS for header
-//Release: Eucalyptus.3 for IIMB
-//Description: Header logo size fixed
-//Author: Nitin Ayer
-//Date: 18/04/2017
-  .header-global nav {
-   max-width: 1200px;
-   width: 1200px !important;
-   padding: 18px 0px 0px 0px;
+
+  html {
+    background: $white !important;
   }
 
   .header-global {
-   position: fixed;
-   top: 0px;
-
-   .nav-global li {
-    vertical-align: top;
-   }
-
-   h1.logo a .logo_image_one {
-    height: 70px;
-    margin: -8px 0px 0px 0px;
-  }
- }
-
-//CSS for content-wrapper div
- .content-wrapper{
-  margin-top: 76px;
-  background: $white;
-  padding-bottom: 40px;
- }
-
-//CSS for border color of input fields
- textarea, input[type="text"], input[type="email"], input[type="password"] {
-  border: 1px solid $border-color-l2;
- }
-
-//CSS for password reset button
- .login-register .action-primary {
-  background: $button-color none repeat scroll 0% 0%;
-  box-shadow: 0px 2px 1px 0px $white;
-  color: $gray-1;
-  text-shadow: none;
-
-  &:hover{
-   box-shadow: none !important;
-   background: $link-color none repeat scroll 0% 0%;
+    position: fixed;
+    top: 0px;
   }
 
-  &:focus{
-   box-shadow: none !important;
-   background: $link-color none repeat scroll 0% 0%;
-   outline: 0px;
-  }
- }
+  .content-wrapper{
+    margin-top: 76px;
+    background: $white;
 
-//CSS for footer
+    textarea, input[type="text"], input[type="email"], input[type="password"] {
+      border: 1px solid $border-color-l2;
+    }
+
+    .login-register {
+
+      .action-primary {
+        background: $button-color none repeat scroll 0% 0%;
+        box-shadow: 0px 2px 1px 0px $white;
+        color: $gray-1;
+        text-shadow: none;
+
+        &:hover, &:focus {
+	  box-shadow: none !important;
+	  background: $link-color none repeat scroll 0% 0%;
+	  outline: 0;
+        }
+      }
+    }
+  }
+
  .wrapper-footer {
   display: none;
  }

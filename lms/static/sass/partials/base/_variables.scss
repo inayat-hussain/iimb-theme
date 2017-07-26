@@ -10,49 +10,62 @@
 //Date: 06/03/2017
 @import 'lms/static/sass/partials/base/variables';
 
-//Release: Eucalyptus.3 for IIMB
-//Description: For making theme name dynamic 06th Jan 2016
-// A new variable called customthemevariable is being created with a dummy name cypress-theme. This will be replaced later at the time of 
-// running paver commands.
-//Author: Nitin Ayer
-//Date: 06/01/2016
-$customthemevariable: iimb-theme !global;
 
 //-----------------
 //  Color variables (from Stanford palette unless noted)
 //-----------------
 
-//Release: Eucalyptus.3 for IIMB
-//Description: main-color and link-color changed for IIMB
+//Release: IIMBX Ficus release
+//Description: default stanford theme colour commented
 //Author: Nitin Ayer
-//Date: 06/03/2017
+//Date: 20/07/2017
+
 //Main Color Variables
 //$main-color: #f7691f;
 //$dark-color: #ea281f; //Link Color
-$main-color: #9E0B0F;
-$dark-color: #B11117; //Link Color
+//$light-color: #f4e00c; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
+//$bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
+//Main BG Color Variables
+//$main-bg: #822537;
+//$main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
+//$main-bg-25: lighten($main-bg, 25%); 
+
+//Secondary Color Variables
+//$secondary: #b5a4b7;
+//$secondary-50: lighten($secondary, 9%);
+//$secondary-25: lighten($secondary, 20%); //Important Heading BG Color 
+
+//Gray Color Variables
+//$gray: #3f3f3f; //Main Text Color
+//$gray-75: lighten($gray, 18.25%); //Lighter Text Color
+
+//$gray-3: #e9e9e9; //Block/Course BG Color
+//$gray-2: #f2f2f2;
+//$gray-1: #fbfbfb; //Main BG Color
+//$white: $gray-1;
+
+//$black: #2e2e2e;
+//$black-80: #585858;
+
+
+//Release: IIMBX Ficus release
+//Description: main-color, dark-color, main-bg, main-bg-60, main-bg-25, secondary, gray-1, white, black-80 colours changed.
+//Author: Nitin Ayer
+//Date: 20/07/2017
+//Main Color Variables
+$main-color: #9E0B0F;;
+$dark-color: #B11117; //Link Color
 $light-color: #f4e00c; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
-//Release: Eucalyptus.3 for IIMB
-//Description: main-bg color changed
-//Author: Nitin Ayer
-//Date: 06/03/2017
 //Main BG Color Variables
-//$main-bg: #822537;
 $main-bg: #8B0304;
-$main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
-$main-bg-25: lighten($main-bg, 25%); 
+$main-bg-60: $main-bg;
+$main-bg-25: $main-bg;
 
-//Release: Eucalyptus.3 for IIMB
-//Description: secondary color changed
-//Author: Nitin Ayer
-//Date: 06/03/2017
 //Secondary Color Variables
-
-//$secondary: #b5a4b7;
-$secondary: #b9b9b9;//
+$secondary: #B9B9B9;
 $secondary-50: lighten($secondary, 9%);
 $secondary-25: lighten($secondary, 20%); //Important Heading BG Color 
 
@@ -62,20 +75,10 @@ $gray-75: lighten($gray, 18.25%); //Lighter Text Color
 
 $gray-3: #e9e9e9; //Block/Course BG Color
 $gray-2: #f2f2f2;
-//Release: Eucalyptus.3 for IIMB
-//Description: background and white color changed
-//Author: Nitin Ayer
-//Date: 06/03/2017
-//$gray-1: #fbfbfb; //Main BG Color
-$gray-1: #f7f7f7; //Main BG Color
-//$white: $gray-1; //Main BG Color 
+$gray-1: #F7F7F7; //Main BG Color
 $white: #FFFFFF;
+
 $black: #2e2e2e;
-//Release: Eucalyptus.3 for IIMB
-//Description: Header text color black-80 changed
-//Author: Nitin Ayer
-//Date: 18/12/2015
-//$black-80: #585858;
 $black-80: #3D3E3F;
 
 //Release: Eucalyptus.3 for IIMB
@@ -92,6 +95,9 @@ $course_block-bg: #e9e9e9;
 $table-coloumn_bg: #B7BFC6;
 $search-bar-gray: #CCCCCC;
 $black_font_color: #000000;
+
+
+
 //-----------------
 //  Font Assignment
 //-----------------
@@ -104,6 +110,9 @@ $theme-serif-font: 'Crimson Text';
 $serif: $theme-serif-font, $serif;
 
 $font_family1: $sans-serif;
+
+
+
 
 //-----------------
 //  Theme Element Assignments
@@ -248,13 +257,14 @@ $footer_margin: ($baseline/4) 0;
 //  CSS BG Images
 //-----------------
 //Release: Eucalyptus.3 for IIMB
-//Description: Image URL changed changed
+//Description: homepage image URL changed
 //Author: Nitin Ayer
 //Date: 06/03/2017
 
 $homepage-bg-image: url('../images/homebanner.png');
-$login-banner-image: url('../images/bg-banner-account.png');
-$register-banner-image: url('../images/bg-banner-account.png');
+
+$login-banner-image: none;
+$register-banner-image: none;
 
 //Release: Eucalyptus.3 for IIMB
 //Description: Background images variable for static pages
@@ -282,188 +292,234 @@ $iitbx_faq_image02: url('../images/FAQ/arrow_down.png');
     text-align: right;
 }
 
+
+//-----------------
+// Override CSS
+//-----------------
+//Release: IIMBx Ficus release
+//Description: html background changed
+//Author: Nitin Ayer
+//Date: 22/07/2017
+html {
+    //background-color: $secondary-25 !important;
+    background-color: $white !important;
+}
+
+//Release: IIMBx Ficus release
+//Description: Width for the body added
+//Author: Nitin Ayer
+//Date: 22/07/2017
+body {
+    min-width: 1200px;
+    width: 100%;
+    display: table;
+}
+
+//-----------------
+// Header Styling
+//-----------------
+.home>header {
+    height: 500px;
+
+    .outer-wrapper {
+        padding: 120px 0 !important;
+    }
+}
+
+//-----------------
+// Footer Styling
+//-----------------
+.wrapper-footer {
+    box-shadow: none !important;
+    
+    footer {
+        max-width: 1180px;
+        margin: 0 auto;
+
+        .colophon {
+            width: 80%;
+            float: left;
+
+            .nav-colophon li {
+                display: inline-block;
+                height: 35px;
+                float: left;
+                margin: 0 20px 20px 0;
+            }
+        }
+
+        .references {
+            width: 15%;
+            float: right;
+        }
+    }
+
+    .copyright {
+        clear: both;
+    }
+}
+
+//-----------------
+// TOS Styling
+//-----------------
+section.tos {
+    box-sizing: border-box;
+    padding: 0 50px;
+
+    .print {
+        margin: 50px 0;
+    }
+}
+
+
 //Release: Eucalyptus.3 for IIMB
 //Description: Link CSS
 //Author: Nitin Ayer
 //Date: 06/03/2017
 
 .links-active {
- color: $button-color;
- text-decoration: none;
- font-family: $font_family1;
- outline: 0px;
+  color: $button-color;
+  text-decoration: none;
+  font-family: $font_family1;
+  outline: 0px;
 
-  &:link {
-   color: $button-color;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
- }
-
-  &:visited {
-   color: $button-color;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
- }
+  &:link, &:visited {
+    color: $button-color;
+    text-decoration: none;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 
   &:hover {
-   color: $link-color;
-   text-decoration: none !important;
-   border-bottom: 1px dotted $link-color;
-   font-family: $font_family1;
-   outline: 0px;
- }
+    color: $link-color;
+    text-decoration: none !important;
+    border-bottom: 1px dotted $link-color;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 
   &:active {
-   color: $button-color;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
- }
+    color: $button-color;
+    text-decoration: none;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 }
 
+
 .links {
- color: $gray-4;
- text-decoration: none;
- font-family: $font_family1;
- outline: 0px;
+  color: $gray-4;
+  text-decoration: none;
+  font-family: $font_family1;
+  outline: 0px;
 
-  &:link {
-   color: $gray-4;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
-  } 
-
-  &:visited {
-   color: $gray-4;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
+  &:link, &:visited {
+    color: $gray-4;
+    text-decoration: none;
+    font-family: $font_family1;
+    outline: 0px;
   }
 
   &:hover {
-   color: $link-color;
-   text-decoration: none !important;
-   border-bottom: 1px dotted $link-color;
-   font-family: $font_family1;
-   outline: 0px;
+    color: $link-color;
+    text-decoration: none !important;
+    border-bottom: 1px dotted $link-color;
+    font-family: $font_family1;
+    outline: 0px;
   }
 
   &:active {
-   color: $gray-4;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
- }
+    color: $gray-4;
+    text-decoration: none;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 }
 
 .links2 {
- color: $white;
- font-family: $font_family1;
- outline: 0px;
+  color: $white;
+  font-family: $font_family1;
+  outline: 0px;
 
-  &:link {
-   color: $white;
-   font-family: $font_family1;
-   text-decoration: underline;
-   outline: 0px;
-  }
-
-  &:visited {
-   color: $white;
-   font-family: $font_family1;
-   text-decoration: underline;
-   outline: 0px;
+  &:link, &:visited {
+    color: $white;
+    font-family: $font_family1;
+    text-decoration: underline;
+    outline: 0px;
   }
 
   &:hover {
-   color: $white !important;
-   text-decoration: none !important;
-   border-bottom: 1px dotted $white;
-   font-family: $font_family1;
-   outline: 0px;
+    color: $white !important;
+    text-decoration: none !important;
+    border-bottom: 1px dotted $white;
+    font-family: $font_family1;
+    outline: 0px;
   }
 
   &:active {
-   color: $white;
-   font-family: $font_family1;
-   outline: 0px;
- }
+    color: $white;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 }
 
 .links_sidebar {
- color: $white;
- text-decoration: none;
- font-family: $font_family1;
- outline: 0px;
+  color: $white;
+  text-decoration: none;
+  font-family: $font_family1;
+  outline: 0px;
 
-  &:link {
-   color: $white;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
- }
-
-  &:visited {
-   color: $white;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
- }
+  &:link, &:visited {
+    color: $white;
+    text-decoration: none;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 
   &:hover {
-   color: $link-color;
-   text-decoration: none !important;
-   border-bottom: 1px dotted $link-color;
-   font-family: $font_family1;
-   outline: 0px;
- }
+    color: $link-color;
+    text-decoration: none !important;
+    border-bottom: 1px dotted $link-color;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 
   &:active {
-   color: $link-color;
-   text-decoration: none !important;
-   border-bottom: 1px dotted $link-color;
-   font-family: $font_family1;
-   outline: 0px;
- }
+    color: $link-color;
+    text-decoration: none !important;
+    border-bottom: 1px dotted $link-color;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 }
 
 .links-active2 {
- color: $button-color;
- text-decoration: none;
- font-family: $font_family1;
- outline: 0px;
+  color: $button-color;
+  text-decoration: none;
+  font-family: $font_family1;
+  outline: 0px;
 
-  &:link {
-   color: $button-color;
-   text-decoration: none;
-   font-family: $font_family1;
-   outline: 0px;
-  }
-
-  &:visited {
-   color: $button-color;
-   text-decoration: none !important;
-   font-family: $font_family1;
-   outline: 0px;
+  &:link, &:visited {
+    color: $button-color;
+    text-decoration: none;
+    font-family: $font_family1;
+    outline: 0px;
   }
 
   &:hover {
-   color: $link-color;
-   text-decoration: none !important;
-   border-bottom: 1px dotted $link-color;
-   font-family: $font_family1;
-   outline: 0px;
- }
+    color: $link-color;
+    text-decoration: none !important;
+    border-bottom: 1px dotted $link-color;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 
   &:active {
-   color: $link-color;
-   text-decoration: none !important;
-   font-family: $font_family1;
-   outline: 0px;
- }
+    color: $link-color;
+    text-decoration: none !important;
+    font-family: $font_family1;
+    outline: 0px;
+  }
 }
 
 //Release: Eucalyptus.3 for IIMB
@@ -544,6 +600,73 @@ $iitbx_faq_image02: url('../images/FAQ/arrow_down.png');
   color: $white;
   font-size: 18px
  }
+
+//Release: IIMBx Ficus release
+//Description: Unenroll button CSS
+//Author: Nitin Ayer
+//Date: 23/07/2017
+
+.modal { 
+  .inner-wrapper {
+
+    header h2 {
+      font-family: $sans-serif;
+      font-weight: 600;
+    }
+
+    form .submit input[type="submit"] {
+      background: $button-color none repeat scroll 0px 0px;
+      border: 0px none $white;
+      border-radius: 5px;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      font-family: $sans-serif;
+      font-weight: 600;
+      padding: 4px 20px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: none;
+      line-height: normal;
+      letter-spacing: 1px;
+
+      &:focus:not(:disabled), hover:not(:disabled) {
+        background-image: none;
+        background-color: $link-color;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+//Release: IIMBx Ficus release
+//Description: Search button CSS
+//Author: Nitin Ayer
+//Date: 23/07/2017
+.search-bar {
+  .search-button, .cancel-button {
+    background: $button-color !important;
+
+    &:hover, &:active, &:focus, &:focus:not(:disabled), &:hover:not(:disabled) {
+      background: $link-color !important;
+      outline: 0;
+    }
+  }
+}
+
+//Release: IIMBx Ficus release
+//Description: Explore courses button CSS
+//Author: Nitin Ayer
+//Date: 23/07/2017
+.empty-dashboard-message a {
+  background: $button-color !important;
+  border: 1px solid $button-color !important;
+  font-weight: 600;
+
+  &:hover, &:focus, &:active {
+    background: $link-color !important;
+    color: $white !important;
+  }
+}
 
 //Release: Eucalyptus.3 for IIMB
 //Description: New SCSS files related static pages imported

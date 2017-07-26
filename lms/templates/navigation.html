@@ -5,11 +5,7 @@
 <%!
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
-#Release: Eucalyptus.3 for IIMB
-#Description: settings imported
-#Author: Nitin Ayer
-#Date: 07/03/2017
-from django.conf import settings
+
 from context_processors import doc_url
 from lms.djangoapps.ccx.overrides import get_current_ccx
 from openedx.core.djangolib.markup import HTML, Text
@@ -18,6 +14,7 @@ from openedx.core.djangolib.markup import HTML, Text
 from branding import api as branding_api
 # app that handles site status messages
 from status.status import get_site_status_msg
+from util.enterprise_helpers import get_enterprise_customer_logo_url
 %>
 
 ## Provide a hook for themes to inject branding on top.
@@ -52,18 +49,26 @@ site_status_msg = get_site_status_msg(course_id)
 </%block>
   <header id="global-navigation" class="header-global ${"slim" if course else ""}" >
     <nav class="wrapper-header" aria-label="${_('Global')}">
-    <h1 class="logo">
-    <!--Release: Eucalyptus.3 for IIMB
-    Description: logos changed from PNG to SVG format
+    <!--Release: IIMBx Ficus release
+    Description: User authintication check added for two logos
     Author: Nitin Ayer
-    Date: 17/04/2017-->
+    Date: 20/07/2017-->
     % if user.is_authenticated():
+    <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
     % else:
+    <h1 class="logo platformlogo">
       <a class="platformlogo_url" href="${marketing_link('ROOT')}">
     % endif:
         <%block name="navigation_logo">
-            <img src="${static.url(branding_api.get_logo_url())}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+        <%
+        logo_url = get_enterprise_customer_logo_url(request)
+        logo_size = 'ec-logo-size'
+        if logo_url is None:
+            logo_url = branding_api.get_logo_url(is_secure)
+            logo_size = ''
+        %>
+            <img class="${logo_size}" src="${logo_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -85,31 +90,32 @@ site_status_msg = get_site_status_msg(course_id)
         <ol class="left nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
-	    <!--Release: Eucalyptus.3 for IIMB
-	    Description: Menu option added after user is logged in
-	    Author: Nitin Ayer
-	    Date: 17/04/2017-->
-            <li class="nav-global-01">
-              <a class="cta cta-register" href="${marketing_link('ABOUT')}">${_("About")}</a>
-            </li>
-            <li class="nav-global-02">
-              <a class="cta cta-register" href="${marketing_link('PROGRAMMES_PAGE')}">${_("Programmes")}</a>
-            </li>
-            <li class="item nav-global-03">
+<!--
+Release: IIMBx Ficus release
+Description:
+1. Marketing URL added
+2. Explorer Courses changed to Courses
+Author: Nitin Ayer
+Date: 21/07/2017-->
+            <li class="item nav-global-01">
+              <a class="btn" href="${marketing_link('ABOUT')}">${_("About")}</a>
+            </li><li class="item nav-global-02">
+              <a class="btn" href="${marketing_link('PROGRAMMES_PAGE')}">${_("Programmes")}</a>
+            </li><li class="item nav-global-03">
               <a href="${marketing_link('COURSES')}">${_('courses')}</a>
-            </li>
-	    <li class="nav-global-04">
-		<div class="title">
-			<div class="course-search">
-				<form method="get" action="/courses">
-					<input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+            </li><li class="item nav-global-04">
+                <div class="title">
+                        <div class="course-search">
+                                <form method="get" action="/courses">
+                                        <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
                                         <button class="search-button" type="submit">
                                         <i class="icon fa fa-search" aria-hidden="true"></i>
                                         </button>
                                 </form>
                         </div>
                 </div>
-	    </li>
+            </li>
+
           % endif
           % if show_program_listing:
             <li class="tab-nav-item">
@@ -133,6 +139,10 @@ site_status_msg = get_site_status_msg(course_id)
       </ol>
 
       <%include file="user_dropdown.html"/>
+
+      <a href="${get_online_help_info(online_help_token)['doc_url']}" 
+         target="_blank"
+         class="doc-link">${_("Help")}</a>
 
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
@@ -165,64 +175,64 @@ site_status_msg = get_site_status_msg(course_id)
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
 <!--
-Release: Eucalyptus.3 for IIMB
-Description: ABOUT page marketing URL map changed and Explorer Courses changed to Courses
+Release: IIMBx Ficus release
+Description:
+1. Marketing URL added
+2. Explorer Courses changed to Courses
+3. Register option commented
 Author: Nitin Ayer
-Date: 07/03/2017-->
-	      <li class="nav-global-01">
-                <a class="cta cta-register" href="${marketing_link('ABOUT')}">${_("About")}</a>
-              </li>
-	      <li class="nav-global-02">
-                <a class="cta cta-register" href="${marketing_link('PROGRAMMES_PAGE')}">${_("Programmes")}</a>
-              </li>
-              <li class="nav-global-03">
-                <!--<a class="btn" href="/courses">${_("Explore Courses")}</a>-->
+Date: 21/07/2017-->
+              <li class="item nav-global-01">
+                <a class="btn" href="${marketing_link('ABOUT')}">${_("About")}</a>
+              </li><li class="item nav-global-02">
+                <a class="btn" href="${marketing_link('PROGRAMMES_PAGE')}">${_("Programmes")}</a>
+              </li><li class="item nav-global-03">
                 <a class="btn" href="/courses">${_("Courses")}</a>
               </li>
-<!--
-Release: Eucalyptus.3 for IIMB
-Description: Language option commented for IIMB
-Author: Nitin Ayer
-Date: 07/03/2017-->
-	      <%doc><li class="nav-global-06">
-		<a href="#change_language" rel="leanModal" class="cta cta-register">${_("Language")}</a>
-	     </li></%doc>
+            %endif
+            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+              <li class="item nav-global-04">
+                <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+              </li>
+            % else:
+              <!--<li class="item nav-global-04">
+                <a class="btn-neutral" href="/register${login_query()}">${_("Register")}</a>
+              </li>-->
             % endif
           % endif
         </%block>
       </ol>
 <!--
-Release: Eucalyptus.3 for IIMB
-Description: 
+Release: IIMBx Ficus release
+Description:
 1. Added second logo of IIMB
-2. Course Search and Register Now option added with Login option
-3. Login button text changed from "Sign in" to "Login"
-4. logos changed from PNG to SVG format
+2. Course search and Register Now option added with Login option
+3. Sign in changed to Login
 Author: Nitin Ayer
-Date: 17/04/2017-->
-	<h1 class="platform_logo">
-		<a href="${marketing_link('ROOT')}">
-			<img src=${static.url('images/headerlogo.svg')} alt="Home Page" />
-		</a>
-	</h1>
+Date: 21/07/2017-->
+      <h1 class="platform_logo">
+        <a href="${marketing_link('ROOT')}">
+          <img src=${static.url('images/headerlogo.svg')} alt="Home Page" />
+        </a>
+      </h1>
+
       <ol class="right nav-courseware list-inline">
-	<li class="nav-global-04">
-		<div class="title">
-			<div class="course-search">
-				<form method="get" action="/courses">
-					<input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-					<button class="search-button" type="submit">
-					<i class="icon fa fa-search" aria-hidden="true"></i>
-					</button>
-				</form>
-			</div>
-		</div>
-	</li>
-	<li class="item nav-global-05">
-		<a class="btn-neutral" href="/register${login_query()}">${_("Register Now")}</a>
-	</li>
+        <li class="item nav-courseware-01">
+                <div class="title">
+                        <div class="course-search">
+                                <form method="get" action="/courses">
+                                        <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+                                        <button class="search-button" type="submit">
+                                        <i class="icon fa fa-search" aria-hidden="true"></i>
+                                        </button>
+                                </form>
+                        </div>
+                </div>
+        </li><li class="item nav-courseware-02">
+          <a class="btn-neutral" href="/register${login_query()}">${_("Register Now")}</a>
+        </li>
         <%block name="navigation_sign_in">
-          <li class="item nav-courseware-01">
+          <li class="item nav-courseware-03">
             % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                 <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
@@ -264,49 +274,6 @@ Date: 17/04/2017-->
       % endif
     </nav>
 </header>
-
-<!--
-Release: Eucalyptus.3 for IIMB
-Description: Language code commented for IIMB
-Author: Nitin Ayer
-Date: 07/03/2017-->
-<!--Bab Bharat MOOCs-->
-<!--
-<script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
-
-(function() {
-
-
-//$('.message.is-expandable .wrapper-tip').bind('click', toggleExpandMessage);
-
-$("#submit-lang").click(function(event, xhr) {
-
-event.preventDefault();
-
-$.post('/lang_pref/setlang/',
-
-{"language": $('#settings-language-value').val()})
-
-.done(
-
-function(data){
-
-// submit form as normal
-
-$('.settings-language-form').submit();
-
-}
-
-);
-
-});
-
-})(this);
-
-
-</script>-->
-
 % if course:
 <!--[if lte IE 9]>
 <div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
