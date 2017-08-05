@@ -50,10 +50,10 @@ from openedx.core.djangolib.js_utils import (
 
     <%block name="header_extras"></%block>
 <!--Release: IIMBx Ficus release
-Description: FAVICON addded
+Description: FAVICON addded and FAVICON_PATH added in FEATURES settings
 Author: Nitin Ayer
-Date: 24/07/2017-->
-    <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}" />
+Date: 05/08/2017-->
+    <link rel="icon" type="image/x-icon" href="${static.url(settings.FEATURES.get('FAVICON_PATH'))}" />
   </head>
 
   <body class="${static.dir_rtl()} <%block name='bodyclass'></%block> lang_${LANGUAGE_CODE}">

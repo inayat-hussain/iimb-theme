@@ -67,7 +67,11 @@ Date: 23/07/2017-->
               <img src="${static.url('images/social/ico-social-twitter.png')}" alt="${_('{platform_name} on Twitter').format(platform_name=settings.PLATFORM_NAME)}" />
             </a>
           </li><li class="nav-social-03">
-            <a href=${_('{platform_name}').format(platform_name=settings.PLATFORM_YOUTUBE_ACCOUNT)} target="_blank" rel="external">
+<!--Release: IIMBx Ficus release
+Description: PLATFORM_YOUTUBE_ACCOUNT added in FEATURES settings
+Author: Nitin Ayer
+Date: 05/08/2017-->
+            <a href=${_('{platform_name}').format(platform_name=settings.FEATURES.get('PLATFORM_YOUTUBE_ACCOUNT'))} target="_blank" rel="external">
               <img src="${static.url('images/social/ico-social-youtube.png')}" alt="${_('{platform_name} on YouTube').format(platform_name=settings.PLATFORM_NAME)}" />
             </a>
           </li>
