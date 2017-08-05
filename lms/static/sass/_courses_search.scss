@@ -10,7 +10,7 @@
     top: 0px;
     z-index: 200;
 
-    .nav-courseware-01{
+    .nav-courseware-01 {
       display: none;
     }
 
@@ -28,85 +28,90 @@
     background: $white;
     padding-bottom: 40px;
 
-    .find-courses{
+    .find-courses {
       background: $white;
       padding: 0px;
 
-    .filters .clear-filters {
-      color: $link-color;
-    }
-      .courses-container{
-	max-width: 1180px;
+      .filters .clear-filters {
+        color: $link-color;
+      }
 
-	.discovery-input {
-	  border: 2px solid $border-color-l2;
+      .courses-container {
+        max-width: 1180px;
 
-	  &:hover, &:active, &:focus, &:focus:not(:disabled), &:hover:not(:disabled) {
-	    border: 2px solid $border-color-l2;
-	  }
-	}
+        .discovery-input {
+          border: 2px solid $border-color-l2;
 
-	.discovery-submit {
-	  background: $button-color;
-	  border: 2px solid $button-color;
+          &:hover, &:active, &:focus, &:focus:not(:disabled), &:hover:not(:disabled) {
+            border: 2px solid $border-color-l2;
+          }
+        }
 
-	  &:hover, &:active, &:focus, &:focus:not(:disabled), &:hover:not(:disabled) {
-	    background: $link-color;
-	    border: 2px solid $button-color;
-	    box-shadow: none;
-	  }
-	}
+        .discovery-submit {
+          background: $button-color;
+          border: 2px solid $button-color;
 
-	.loading-spinner {
-	  background: $link-color;
-	}
+          &:hover, &:active, &:focus, &:focus:not(:disabled), &:hover:not(:disabled) {
+            background: $link-color;
+            border: 2px solid $button-color;
+            box-shadow: none;
+          }
+        }
 
-	.courses-listing .courses-listing-item {
-	  margin: 15px 10px 15px 10px !important;
-	  width: 275px !important;
-	  float: left;
-	  clear: none !important;
+        .loading-spinner {
+          background: $link-color;
+        }
+
+        .courses-listing .courses-listing-item {
+          margin: 15px 10px 15px 10px !important;
+          width: 275px !important;
+          float: left;
+          clear: none !important;
 
           &:first-child {
-	    margin-left: 15px; 
+            margin-left: 15px; 
           }
 
-	  &:nth-child(3n+1) {
-	    margin-right: 15px;
-	    clear: initial !important;
+          &:nth-child(3n+1) {
+            margin-right: 15px;
+            clear: initial !important;
+          }
+
+          &:nth-child(4n+1) {
+            clear: left !important;
+          }
+        }
+
+        .courses .course {
+          border-left: none;
+          border-top: none;
+          border-right: none;
+
+	  a {
+	    outline: 0;
 	  }
 
-	  &:nth-child(4n+1) {
-	    clear: left !important;
-	  }
-	}
-
-	.courses .course {
-	  border-left: none;
-	  border-top: none;
-	  border-right: none;
-
-	  .course-info .course-title {
-	    color: $black-80;
-	  }
+          .course-info .course-title {
+            color: $black-80;
+          }
 
           .course-image .cover-image .learn-more {
-	    border-color: $link-color;
+            border-color: $link-color;
             background: $link-color;
-	  }
-	}
+          }
+        }
 
-	.search-facets.phone-menu {
-	  display:none;
-	}
+        .search-facets.phone-menu {
+          display:none;
+        }
 
-	.courses:not(.no-course-discovery) {
+        .courses:not(.no-course-discovery) {
           width: 100% !important;
-	  background: $course_block-bg;
-	  margin-right: 0px !important;
-	  padding-top: 0px;
-	  margin-top: 40px;
-	}
+          background: $course_block-bg;
+          margin-right: 0px !important;
+          padding-top: 0px;
+          margin-top: 40px;
+        }
       }
     }
   }

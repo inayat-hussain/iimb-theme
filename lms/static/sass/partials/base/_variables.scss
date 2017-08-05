@@ -326,37 +326,597 @@ body {
     }
 }
 
+//Release: IIMBx Ficus release
+//Description: CSS for header modification
+//Author: Nitin Ayer
+//Date: 03/08/2017
+
+.header-global.slim {
+  padding: 0;
+  height: 76px;
+  border-bottom: 1px solid $gray-l1;
+
+  .wrapper-header {
+    height: 40px;
+  }
+
+  h1.logo {
+
+    &:before {
+      width: 0px;
+    }
+
+    &:after {
+      width: 0px;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+
+  h2 {
+    width: auto;
+  }
+}
+
+.header-global {
+
+  h1.logo {
+    margin: 0 ($baseline/2) 0 0 !important;
+    @include padding-right(20px);
+
+    a {
+      display: block;
+      outline: 0;
+
+      img {
+	height: 50px !important;
+      }
+    }
+  }
+
+  .platformlogo {
+    height: 70px;
+    margin: 0px;
+    outline: 0;
+
+    .platformlogo_url {
+      margin: -10px 0px 0px 0px;
+      outline: 0;
+
+      img {
+        height: 70px !important;
+      }
+    }
+  }
+
+  h1.platform_logo {
+    float: right;
+    position: relative;
+    margin: 0px 0px 0px 40px;
+
+    a {
+      display: block;
+      outline: 0;
+    }
+
+    img {
+      height: 50px;
+   }
+  }
+
+  .wrapper-header {
+    height: auto !important;
+    max-width: 1200px !important;
+    width: 1200px !important;
+    display: block;
+    padding: 13px 0px 12px 0px !important;
+
+    .nav-global {
+      margin-top: 15px;
+
+     li {
+       vertical-align: top;
+
+	a {
+         color: $lighter-base-font-color;
+         outline: 0;
+
+         &:hover, &:focus, &:active {
+	  color: $link-color;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-courseware {
+    margin-top: 10px;
+
+    li {
+      display: inline-block;
+      margin: 0 $baseline+1 0 0;
+      font-size: em(14);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0 !important;
+      vertical-align: middle;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        margin-top: 4px;
+      }
+
+      a {
+        display:block;
+        padding: ($baseline/4);
+        color: $lighter-base-font-color;
+        font-weight: 600;
+	outline: 0;
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+          color: $link-color;
+        }
+      }
+
+      &.active {
+
+        a {
+          text-decoration: none;
+          color: $link-color;
+          outline: 0;
+        }
+      }
+
+      .btn {
+        background: none !important;
+        display: block !important;
+        padding: ($baseline/4) !important;
+        color: $lighter-base-font-color !important;
+        font-weight: 600 !important;
+
+        &:hover, &:focus, &:active {
+	  text-decoration: none;
+          color: $link-color !important;
+          background: none;
+        }
+      }
+    }
+  }
+
+  .user {
+
+    > .primary {
+
+      > a {
+        background: none;
+        box-shadow: none;
+        outline: 0px;
+
+	&:hover, &:focus, &:active {
+	  text-decoration: none;
+	  color: $link-color;
+	  background: none;
+	}
+      }
+    }
+
+    .dropdown {
+      background: none !important;
+      outline: 0px;
+    }
+
+    .dropdown-menu li > a {
+      outline: 0;
+    }
+  }
+
+  .wrapper-user-menu {
+    @include float(right);
+    @extend %ui-print-excluded;
+    padding-left: 0;
+    margin: 0;
+
+      > a {
+        margin: 0;
+        background-image: none;
+
+        &:hover, &:focus {
+        color: $link-color;
+        text-decoration: none;
+        }
+      }
+
+      .dropdown-menu {
+        width: 100%;
+        min-width: 120px;
+        box-sizing: initial;
+        line-height: 1em;
+        padding: 5px 10px;
+      }
+
+    .menu-title {
+      padding: 0;
+      position: relative;
+      text-transform: none;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0;
+
+      .menu-image {
+        max-width: ($baseline*2);
+        border-radius: 10%;
+      }
+
+      .icon {
+        display: inline-block;
+        @include float(left);
+        @include margin(2px, 6px, -3px, 3px);
+        font-size: 1.2em;
+        color: $m-gray;
+      }
+    }
+
+    .menu-button {
+      font-size: $body-font-size;
+      padding: 0 ($baseline/2);
+      color: $base-font-color;
+      border: none;
+      background: none;
+      box-shadow: none;
+      text-shadow: none;
+      margin-top: 0px;
+      outline: 0;
+    }
+
+    .dropdown-menu {
+      width: auto;
+      background: $white;
+      border-radius: 4px;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0, 0.3);
+      border: 1px solid $gray-l3;
+      margin-top: 0;
+      padding: 5px 10px;
+      position: absolute;
+      @include right(0px);
+      top: 37px;
+      min-width: 120px;
+      z-index: 3;
+
+      &::before {
+        background: transparent;
+        border: {
+          top: 6px solid $border-color-4;
+          right: 6px solid $border-color-4;
+          bottom: 6px solid transparent;
+          left: 6px solid transparent;
+        }
+        box-shadow: 1px 0 0 0 $gray-l3, 0 -1px 0 0 $gray-l3;
+        content: "";
+        display: block;
+        height: 0px;
+        position: absolute;
+        @include transform(rotate(-45deg));
+        @include right(7px);
+        top: -5px;
+        width: 0px;
+      }
+
+      li {
+        display: block;
+        border-top: 1px dotted $border-color-2;
+        box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.05);
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+
+        &:first-child {
+          border: none;
+          box-shadow: none;
+        }
+
+        > a {
+          border: 1px solid transparent;
+          border-radius: 3px;
+          @include box-sizing(border-box);
+          color: $link-color;
+          cursor: pointer;
+          display: block;
+          margin: 5px 0px;
+          overflow: hidden;
+          padding: 3px 5px 4px;
+          text-overflow: ellipsis;
+          @include transition(padding 0.15s linear 0s);
+          white-space: nowrap;
+          width: 100%;
+	  outline: 0;
+
+          &:hover, &:focus {
+            color: $base-font-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.slim {
+    .wrapper-header {
+      height: inherit;
+
+      .logo img {
+        height: 50px;
+        margin: 0px !important;
+      }
+
+      .course-header {
+        display: block;
+        width: auto;
+        @include float(left);
+        font-size: 0.9em;
+        font-weight: 600;
+        font-family: $font_family1;
+        color: $lighter-base-font-color;
+        letter-spacing: 0;
+        margin: 15px 0px 0px 0px;
+        text-transform: none;
+        text-shadow: 0 1px 0 #fff;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .list-inline.nav-global {
+        display: block;
+      }
+
+      .list-inline.nav-global.authenticated {
+        display: none;
+      }
+    }
+  }
+}
+
+.doc-link {
+   outline: 0;
+
+    &:hover, &:focus, &:active {
+      color: $link-color;
+      text-decoration: none;
+    }
+}
+
+.wrapper-course-material {
+
+  .course-tabs {
+    padding: 0;
+
+    li {
+
+      a,
+      a:visited {
+        color: $gray-d1;
+        outline: 0;
+
+        &:hover,
+        &:focus,
+        &.active {
+          color: $main-bg;
+          border-bottom-color: $outer-border-color;
+        }
+      }
+    }
+  }
+}
+
+section#discussion-container {
+  border: 1px solid $outer-border-color;
+
+  header.page-header {
+    border-bottom: 1px solid $outer-border-color;
+
+    .btn-link {
+      color: $main-bg;
+
+      &:hover,
+      &:focus,
+      &.active {
+        text-decoration: none;
+      }
+    }
+
+    .btn {
+      border-color: $outer-border-color;
+      color: $main-bg;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $white;
+        border-color: $outer-border-color;
+        background: $main-bg;
+      }
+    }
+  }
+}
+
 //-----------------
 // Footer Styling
 //-----------------
+//Release: IIMBx Ficus release
+//Description: CSS for Footer modification
+//Author: Nitin Ayer
+//Date: 03/08/2017
 .wrapper-footer {
-    box-shadow: none !important;
-    
-    footer {
-        max-width: 1180px;
-        margin: 0 auto;
+  border-top: 1px solid tint($m-gray, 50%) !important;
+  min-width: 1200px;
 
-        .colophon {
-            width: 80%;
-            float: left;
+  footer#footer-openedx, footer {
+    width: 1200px;  
+    max-width: 1200px;
 
-            .nav-colophon li {
-                display: inline-block;
-                height: 35px;
-                float: left;
-                margin: 0 20px 20px 0;
+    .colophon {
+      float: left;
+      display: block;
+      margin-right: 2.35765% !important;
+      margin-left: 0px !important;
+      width: 65.88078% !important;
+
+      .nav-colophon {
+	margin: 0px 0px 20px 0px !important;
+
+	ol {
+	  margin: 0px;
+	  padding: 0px;
+
+          li {
+            height: auto;
+            display: block;
+            margin: 0px 30px 0px 0px;
+
+            a {
+              @include transition(link-color 0.15s ease-in-out 0s, border 0.15s ease-in-out 0s);
+              border-bottom: none;
+              text-decoration: none !important;
+              outline: 0;
+
+              &:hover, &:focus, &:active {
+                color: $link-color;
+                border-bottom: 1px dotted $link-color;
+              }
             }
+          }
+        }
+      }
+
+      .wrapper-logo {
+        width: 100%;
+        display: inline-block;
+        margin: 0px !important;
+
+        p.platform_footer_logo {
+          width: auto;
+          display: inline-block;
+          float: left;
+	  margin: 0px;
+
+          a {
+            display: block;
+            outline: 0;
+
+            &:hover, &:focus, &:active {
+              text-decoration: none;
+              border: none;
+            }
+          }
         }
 
-        .references {
-            width: 15%;
-            float: right;
+        p.platform_text {
+          float: left;
+          width: 79% !important;
+          margin-left: 20px;
+          font-size: 0.8125em;
+          font-family: $sans-serif;
+          text-align: justify;
+          color: $lighter-base-font-color;
+          height: 100%;
+          display: block;
+          border-left: 2px solid $white;
+          padding: 5px 0px 5px 20px;
+          line-height: normal;
+          margin: 0px 0px 0px 20px;
         }
+      }
     }
 
-    .copyright {
-        clear: both;
+    .references {
+      margin: 0px !important;
+      width: 31.76157% !important;
+      display: inline-block;
+
+      .nav-social {
+
+	ul {
+	  margin: 0px;
+	  padding: 0px;
+
+          li {
+	    margin: 0px;
+            padding: 0px 5px 0px 0px;
+
+            &:last-child {
+              padding: 0px;
+            }
+
+            a {
+              outline: 0;
+            }
+          }
+        }
+      }
+
+      .nav-legal {
+
+        ul {
+          margin: 0px;
+          padding: 0px;
+
+          li {
+            display: block !important;
+            margin: 0px;
+            text-align: right;
+
+            a {
+	      @include transition(link-color 0.15s ease-in-out 0s, border 0.15s ease-in-out 0s);
+	      border-bottom: none;
+	      color: $link-color !important;
+	      text-decoration: none !important;
+	      outline: 0;
+
+              &:hover, &:focus, &:active {
+                border-bottom: 1px dotted $link-color;
+              }
+
+              &:before {
+              margin-right: ($baseline/4);
+              content: none !important
+              }
+            }
+          }
+        }
+      }
+
+      .footer-about-openedx {
+        width: auto !important;
+        margin: 0px !important;
+        display: block;
+        float: right;
+        padding-top: 10px;
+
+	p {
+	  margin: 0px !important;
+
+          a {
+            outline: 0;
+
+            &:hover, &:focus, &:active {
+              text-decoration: none !important;
+              border: none !important;
+            }
+          }
+        }
+      }
     }
+  }
+
+  .copyright {
+    clear: both;
+  }
 }
 
 //-----------------

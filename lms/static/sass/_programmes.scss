@@ -3,347 +3,328 @@
 //Author: Nitin Ayer
 //Date: 13/03/2017
 
-.programmes{
-//CSS for header
-//Release: Eucalyptus.3 for IIMB
-//Description: Header logo size fixed
-//Author: Nitin Ayer
-//Date: 18/04/2017
-  .header-global nav {
-   max-width: 1200px;
-   width: 1200px;
-   padding: 18px 0px 0px 0px;
-  }
+.programmes {
 
   .header-global {
-   position: fixed;
-   top: 0px;
-
-   .nav-global li {
-    vertical-align: top;
-   }
-
-   h1.logo a .logo_image_one {
-    height: 70px;
-    margin: -8px 0px 0px 0px;
+    position: fixed;
+    top: 0px;
   }
- }
 
-//CSS for content-wrapper div
- .content-wrapper {
-  margin-top: 76px;
-  background: $white;
-  padding-bottom: 60px;
- }
-
-//CSS added for header option highlight
- .nav-global-02 a {
-  color: $link-color !important;
- }
-
-//CSS for View all Courses button
- .courses-more{
-  text-align: center !important;
-  display: table;
-  margin: auto;
-  padding: 0px;
-
-  .courses-more-cta {
-   display: table;
-   background: $button-color none repeat scroll 0px 0px;
-   border: 0px none $white;
-   border-radius: 5px;
-   box-sizing: border-box;
-   color: $white;
-   width: 100%;
-   font-size: 18px;
-   text-decoration: none;
-   text-shadow: none;
-   line-height: 18px;
-   padding: 10px 20px;
-   text-transform: none;
-   letter-spacing: normal;
-   font-family: $font_family1;
-
-    &:hover {
-     text-decoration: none;
-     background-image: none;
-     background-color: $link-color;
-     color: $white;
-    }
-
-    &:focus, &:visited {
-     box-shadow: none !important;
-     text-decoration: none;
-     color: $white;
-   }
-
-    &::after {
-     content: none !important;
-   }
+  .content-wrapper {
+    margin-top: 76px;
+    background: $white;
+    padding-bottom: 60px;
   }
- }
 
- .outer_container {
-  width: auto;
-  margin: auto;
- }
-
- .main_content {
-  width: 1200px;
-  max-width: 1200px;
-  height: auto;
-  margin: auto;
-  background: $white;
- }
-
- .banner {
-  border-bottom: 1px solid $border-color-l3;
- }
-
- .main_banner {
-  display: block;
- }
-
- .tagline {
-  padding: 0px;
-  margin: auto;
-  display: block;
-
-  h2 {
-   color: $link-color;
-   font-family: $font_family1;
-   font-size: 26px;
-   font-weight: 600;
-   letter-spacing: 0em;
-   text-transform: none;
-   text-align: center;
-   display: block;
-   margin: 0px;
-   padding: 30px 0px 30px 0px;
+  //CSS added for header option highlight
+  .nav-global-02 a {
+    color: $link-color !important;
   }
- }
 
- .content {
-  width: 100%;
-  margin: auto;
-  height: auto;	
-  display: inline-block;
- }
-
- .question{
-  font-family: $font_family1;
-  font-size: 16px;
-  color: $black_font_color;
-  line-height: normal;
-  letter-spacing: normal;
-  margin: 20px 0px 0px 0px;
- }
-
- .tagline_inner > h2{
-  font-family: $font_family1;
-  font-size: 22px;
-  font-weight: 400;
-  color: $link-color;
-  line-height: normal;
-  letter-spacing: normal;
-  padding: 60px 0px 0px 0px;
-  margin: auto;
-  text-align:center;
-  text-transform: none;
- }
-
- .image_layer_one{
-  padding: 20px 70px 0px 70px;
-  margin:auto;
-  display:inline-block;	
- }
-
- .course_list{
-  margin:0;
-  padding:0;
-  display:inline-block;
-  list-style:none;
-
-  li{
-   display:inline-block;
-   padding: 0px 40px 40px 0px;
-   vertical-align:top;
-   width:22%;
-   height: 100%;
-   text-align:center;
-
-   &:nth-child(4n){
-    padding: 0px 0px 40px 0px;
-   }
-  }
- }
-
- .course_list_image > img{
-  width:160px;
-  display:inline-block;
- }
-
- .course_name{
-  font-size:14px;
-  color:$black_font_color;
-  margin:0;
-  padding:10px;
-  line-height:normal;
- }
-
- .image_layer_two {
-  padding: 20px 0px 0px 0px;
-  margin:auto;
-  display:inline-block;
-
-  .course_highlights {
-   margin: 0;
-   padding: 0px;
-   display:inline-block;
-   list-style:none;
-
-   li {
-    margin: 0;
+  //CSS for View all Courses button
+  .courses-more {
+    text-align: center !important;
+    display: table;
+    margin: auto;
     padding: 0px;
-    display:inline-block;
-    text-align:center;
+
+    .courses-more-cta {
+      display: table;
+      background: $button-color none repeat scroll 0px 0px;
+      border: 0px none $white;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: $white;
+      width: 100%;
+      font-size: 18px;
+      text-decoration: none;
+      text-shadow: none;
+      line-height: 18px;
+      padding: 10px 20px;
+      text-transform: none;
+      letter-spacing: normal;
+      font-family: $font_family1;
+
+      &:hover {
+        text-decoration: none;
+        background-image: none;
+        background-color: $link-color;
+        color: $white;
+      }
+
+      &:focus, &:visited {
+        box-shadow: none !important;
+        text-decoration: none;
+        color: $white;
+      }
+
+      &::after {
+        content: none !important;
+      }
+    }
+  }
+
+  .outer_container {
+    width: auto;
+    margin: auto;
+  }
+
+  .main_content {
+    width: 1200px;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    background: $white;
+  }
+
+  .banner {
+    border-bottom: 1px solid $border-color-l3;
+  }
+
+  .main_banner {
+    display: block;
+  }
+
+  .tagline {
+    padding: 0px;
+    margin: auto;
+    display: block;
+
+    h2 {
+      color: $link-color;
+      font-family: $font_family1;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 0em;
+      text-transform: none;
+      text-align: center;
+      display: block;
+      margin: 0px;
+      padding: 30px 0px 30px 0px;
+    }
+  }
+
+  .content {
+    width: 100%;
+    margin: auto;
+    height: auto;	
+    display: inline-block;
+  }
+
+  .question {
+    font-family: $font_family1;
+    font-size: 16px;
+    color: $black_font_color;
+    line-height: normal;
+    letter-spacing: normal;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .tagline_inner > h2 {
+    font-family: $font_family1;
+    font-size: 22px;
+    font-weight: 400;
+    color: $link-color;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 60px 0px 0px 0px;
+    margin: auto;
+    text-align: center;
+    text-transform: none;
+  }
+
+  .image_layer_one {
+    padding: 20px 70px 0px 70px;
+    margin: auto;
+    display: inline-block;	
+  }
+
+  .course_list {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding: 0px 40px 40px 0px;
+      vertical-align: top;
+      width: 22%;
+      height: 100%;
+      text-align: center;
+
+      &:nth-child(4n) {
+        padding: 0px 0px 40px 0px;
+      }
+    }
+  }
+
+  .course_list_image > img {
+    width: 160px;
+    display: inline-block;
+  }
+
+  .course_name {
+    font-size: 14px;
+    color: $black_font_color;
+    margin: 0;
+    padding: 10px;
+    line-height: normal;
+  }
+
+  .image_layer_two {
+    padding: 20px 0px 0px 0px;
+    margin: auto;
+    display: inline-block;
+
+    .course_highlights {
+      margin: 0;
+      padding: 0px;
+      display: inline-block;
+      list-style: none;
+
+      li {
+        margin: 0;
+        padding: 0px;
+        display: inline-block;
+        text-align: center;
+
+        img {
+          width: 300px;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 600;
+          color: $black_font_color;
+          padding: 10px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .container_one {
+    width: 100%;
+    height: 100%;
+    background: transparentize($link-color, .7);
+    margin: 60px 0px 0px 0px;
+    display: inline-block;
+    min-width: -moz-fit-content;
+  }
+
+  .container_two {
+    width: 75%;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    background: $white;
+    display: table;
+
+    ul {
+      display: inline-block;
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      text-align: center;
+      vertical-align: top;
+      width: 100%;
+      height: 100%;
+
+      li {
+        display: inline-block;
+        background: $gray-3;
+        width: 31.5%;
+        vertical-align: top;
+        text-align: center;
+        margin: 0 1.35% 0 1.35%;
+
+        &:first-child {
+          margin: 0 0 0 1.35%;
+        }
+
+        &:last-child {
+          margin: 0 1.35% 0 0;
+        }
+      }
+    }
+  }
+
+  .text_content {
+    width: -moz-fit-content;
+    display: block;
+    margin: 0;
+    padding: 24% 15% 18% 10%;
+    text-align:left;
+    transform: skewX(20deg);
+    -webkit-transform: skewX(20deg);
+    -moz-transform: skewX(20deg);
+    -o-transform: skewX(20deg);
+    -ms-transform: skewX(20deg);
 
     img {
-     width: 300px;
+      width: 58px;
+      display: inline-block;
+      float: left;
     }
 
-    p{
-     font-size:14px;
-     font-weight:600;
-     color: $black_font_color;
-     padding:10px;
-     margin:0;
+    .programme_name {
+      display: inline-block;
+      padding: 10px;
+      margin: 0px 0px 0px 10px;
+      line-height: 110%;
+      letter-spacing: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: $black_font_color;
+      text-align: left;
+      border-left: 1px solid $link-color;;
     }
-   }
+
+    .text {
+      padding: 0;
+      font-size: 13px;
+      color: $black;
+      text-align: left;
+      margin: 15px 0px 10px 0px;
+      display: block;
+      line-height: normal;
+    }
   }
- }
 
- .container_one{
-  width: 100%;
-  height: 100%;
-  background:transparentize($link-color, .7);
-  margin: 60px 0px 0px 0px;
-  display: inline-block;
-  min-width: -moz-fit-content;
-  }
-
- .container_two{
-  width: 75%;
-  max-width: 1200px;
-  height:100%;
-  margin:auto;
-  transform: skewX(-20deg);
-  -webkit-transform: skewX(-20deg);
-  -moz-transform: skewX(-20deg);
-  -o-transform: skewX(-20deg);
-  -ms-transform: skewX(-20deg);
-  background:$white;
-  display:table;
-
-  ul{
-   display: inline-block;
-   margin: 0px;
-   padding: 0px;
-   list-style: none;
-   text-align: center;
-   vertical-align: top;
-   width: 100%;
-   height:100%;
-
-   li{
-    display: inline-block;
-    background: #e9e9e9;
-    width: 31.5%;
-    vertical-align: top;
+  .page_link {
+    display: block;
+    margin: auto;
+    padding: 2%;
+    position: relative;
+    top: -10px;
     text-align: center;
-    margin: 0 1.35% 0 1.35%;
+    transform: skewX(20deg);
+    -webkit-transform: skewX(20deg);
+    -moz-transform: skewX(20deg);
+    -o-transform: skewX(20deg);
+    -ms-transform: skewX(20deg);
+    background: url('../images/programmes/programmes_image16.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 35%;
+    background-position-y: 5px;
 
-    &:first-child{
-     margin: 0 0 0 1.35%;
+    a {
+      color: $link-color;
+      text-decoration: none !important;
+      outline: 0;
+
+      &:hover {
+        color: $link-color;
+        text-decoration: none;
+        border-bottom: 1px dotted $link-color;
+      }
     }
-
-    &:last-child{
-     margin: 0 1.35% 0 0;
-    }
-   }
   }
- }
-
- .text_content{
-  width: -moz-fit-content;
-  display:block;
-  margin: 0;
-  padding: 24% 15% 18% 10%;
-  text-align:left;
-  transform: skewX(20deg);
-  -webkit-transform: skewX(20deg);
-  -moz-transform: skewX(20deg);
-  -o-transform: skewX(20deg);
-  -ms-transform: skewX(20deg);
-
-  img {
-   width:58px;
-   display:inline-block;
-   float:left;
-  }
-
-  .programme_name{
-   display: inline-block;
-   padding: 10px;
-   margin: 0px 0px 0px 10px;
-   line-height: 110%;
-   letter-spacing: 0;
-   font-size: 14px;
-   font-weight: 700;
-   color: #000;
-   text-align: left;
-   border-left: 1px solid $link-color;;
-  }
-
-  .text{
-   padding: 0;
-   font-size: 13px;
-   color: $black;
-   text-align: left;
-   margin: 15px 0px 10px 0px;
-   display: block;
-   line-height: normal;
-  }
- }
-
- .page_link{
-  display:block;
-  margin: auto;
-  padding: 2%;
-  position: relative;
-  top: -10px;
-  text-align:center;
-  transform: skewX(20deg);
-  -webkit-transform: skewX(20deg);
-  -moz-transform: skewX(20deg);
-  -o-transform: skewX(20deg);
-  -ms-transform: skewX(20deg);
-  background: url('../images/programmes/programmes_image16.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 35%;
-  background-position-y: 5px;
-
-  a {
-   color:$link-color;
-   text-decoration: none !important;
-
-   &:hover {
-   color:$link-color;
-   text-decoration: none;
-   border-bottom: 1px dotted $link-color;
-   }
-  }
- }
 }

@@ -73,17 +73,24 @@ site_status_msg = get_site_status_msg(course_id)
       </a>
     </h1>
 
+<!--
+Release: IIMBx Ficus release
+Description: User authentication added to display course name and marketing URL
+Author: Nitin Ayer
+Date: 05/08/2017-->
     % if course:
-      <h2 class="course-header"><span class="provider">${course.display_org_with_default}:</span>
-        <span class="course-number">${course.display_number_with_default}</span>
-        <%
-        display_name = course.display_name_with_default
-        if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-          ccx = get_current_ccx(course.id)
-          if ccx:
-            display_name = ccx.display_name
-        %>
-        <span class="course-name">${display_name}</span></h2>
+      % if user.is_authenticated():
+        <h2 class="course-header"><span class="provider">${course.display_org_with_default}:</span>
+          <span class="course-number">${course.display_number_with_default}</span>
+          <%
+          display_name = course.display_name_with_default
+          if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+            ccx = get_current_ccx(course.id)
+            if ccx:
+              display_name = ccx.display_name
+          %>
+          <span class="course-name">${display_name}</span></h2>
+        % endif
       % endif
 
       % if user.is_authenticated():

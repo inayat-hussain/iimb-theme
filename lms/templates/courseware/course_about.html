@@ -117,24 +117,6 @@ Date: 22/07/2017-->
   <header class="course-profile">
     <div class="intro-inner-wrapper">
       <div class="table">
-      <!--Release: IIMBx Ficus release
-          Description: Course image position chnaged
-          Author: Nitin Ayer
-          Date: 22/07/2017-->
-      % if get_course_about_section(request, course, "video"):
-      <a href="#video-modal" class="media" rel="leanModal">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-          <div class="play-intro"></div>
-        </div>
-      </a>
-      %else:
-      <div class="media">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-        </div>
-      </div>
-      % endif
       <section class="intro">
         <div class="heading-group">
           <h1>
@@ -219,11 +201,7 @@ Date: 22/07/2017-->
         </div>
 
       </section>
-      <!--Release: IIMBx Ficus release
-          Description: Course image position chnaged: original code commented
-          Author: Nitin Ayer
-          Date: 22/07/2017-->
-      <%doc>% if get_course_about_section(request, course, "video"):
+      % if get_course_about_section(request, course, "video"):
       <a href="#video-modal" class="media" rel="leanModal">
         <div class="hero">
           <img src="${course_image_urls['large']}" alt="" />
@@ -236,7 +214,7 @@ Date: 22/07/2017-->
           <img src="${course_image_urls['large']}" alt="" />
         </div>
       </div>
-      % endif</%doc>
+      % endif
     </div>
       </div>
   </header>

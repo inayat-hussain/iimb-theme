@@ -15,6 +15,22 @@ Date: 20/07/2017-->
 <%block name="pagetitle">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</%block>
 <%block name="bodyclass">index-page</%block>
 
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: JAVA script added for tagline text formatting
+Author: Nitin Ayer
+Date: 08/02/2017-->
+
+<script type='text/javascript' defer>//<![CDATA[
+$(window).load(function(){
+$('#tagline').each(function(){
+    var $this = $(this);
+    var t = $this.text();
+    $this.html(t.replace('&lt','<').replace('&gt', '>'));
+});
+});//]]>
+</script>
+
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
 <!--Release: IIMBx Ficus release
@@ -59,18 +75,59 @@ Date: 20/07/2017-->
         </div>-->
 
       </header>
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: Variable added to change the tagline text on home page and search related code is removed
+Author: Nitin Ayer
+Date: 08/02/2017-->
+      <div class="tagline_container">
+        <div class="tagline_content">
+	  <div class="tagline">
+            <h2 class="tagline_text" id="tagline">${settings.FEATURES.get('PLATFORM_HEADER_TAGLINE')}</h2>
+          </div>
+          <p><img src=${static.url('images/arrow.png')} alt="" /></p>
+        </div>
+      </div>
+
       <%include file="${courses_list}" />
 
     </section>
 </main>
 
-% if show_homepage_promo_video:
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: Image layer added
+Author: Nitin Ayer
+Date: 06/03/2017-->
+<div class="outer_container">
+  <div class="main_content">
+    <ul>
+      <li>
+        <img src=${static.url('images/home/home_image1.png')} />
+        <p>Acquire Knowledge from IIMB Digitally</p>
+      </li><li>
+        <img src=${static.url('images/home/home_image2.png')} />
+        <p>Experience the IIMB Classroom Virtually</p>
+      </li><li>
+        <img src=${static.url('images/home/home_image3.png')} />
+        <p>Interface with Industry and Academic Leaders</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--
+Release: Eucalyptus.3 for IIMB
+Description: Homepage overlay video code is commented
+Author: Nitin Ayer
+Date: 25/01/2017-->
+<%doc>% if show_homepage_promo_video:
   <section id="video-modal" class="modal home-page-video-modal video-modal">
     <div class="inner-wrapper">
       <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
-% endif
+% endif</%doc>
 
 <%block name="js_extra">
    <script type="text/javascript">
