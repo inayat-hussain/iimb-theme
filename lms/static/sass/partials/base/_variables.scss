@@ -1016,6 +1016,12 @@ section.tos {
     outline: 0px;
   }
 
+  &:focus {
+    color: $white !important;
+    text-decoration: none !important;
+    outline: 0px;
+  }
+
   &:active {
     color: $white;
     font-family: $font_family1;
